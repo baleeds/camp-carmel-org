@@ -1,9 +1,10 @@
-import * as React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import { Header } from "./Header"
+import * as React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
+import { Header } from './Header';
+import { Page } from './Page';
 
 interface Props {
-    children: React.ReactNode;
+  children: React.ReactNode;
 }
 
 export const Layout: React.FC<Props> = ({ children }) => {
@@ -15,11 +16,11 @@ export const Layout: React.FC<Props> = ({ children }) => {
         }
       }
     }
-  `)
+  `);
 
   return (
-    <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+    <Page>
+      <Header />
       <div
         style={{
           margin: `0 auto`,
@@ -39,8 +40,8 @@ export const Layout: React.FC<Props> = ({ children }) => {
           <a href="https://www.gatsbyjs.com">Gatsby</a>
         </footer>
       </div>
-    </>
-  )
-}
+    </Page>
+  );
+};
 
-export default Layout
+export default Layout;
