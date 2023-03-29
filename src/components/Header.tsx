@@ -1,7 +1,11 @@
 import * as React from "react"
 import { Link } from "gatsby"
 
-const Header = ({ siteTitle }) => (
+interface Props {
+    siteTitle: string;
+}
+
+export const Header: React.FC<Props> = ({ siteTitle }) => (
   <header
     style={{
       margin: `0 auto`,
@@ -28,5 +32,3 @@ const Header = ({ siteTitle }) => (
     />
   </header>
 )
-
-export default Header

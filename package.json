@@ -9,6 +9,7 @@
     "gatsby-plugin-image": "^3.8.0",
     "gatsby-plugin-manifest": "^5.8.0",
     "gatsby-plugin-sharp": "^5.8.0",
+    "gatsby-plugin-typescript": "^5.8.0",
     "gatsby-source-filesystem": "^5.8.0",
     "gatsby-transformer-sharp": "^5.8.0",
     "react": "^18.2.0",
@@ -28,7 +29,8 @@
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "type-check": "tsc --noEmit"
   },
   "repository": {
     "type": "git",
