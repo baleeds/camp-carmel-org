@@ -11,11 +11,15 @@ export const GlobalStyles = createGlobalStyle`
     --color-text-default: #2B2B2B;
   }
   
+  * {
+    box-sizing: border-box;
+  }
+  
   html, body {
     font-family: 'Open Sans', sans-serif;
     color: var(--color-text-default);
     margin: 0;
-    padding: 60px 0 0 0;
+    padding: 0;
   }
   
   h1, h2, h3 {
@@ -23,24 +27,45 @@ export const GlobalStyles = createGlobalStyle`
   }
   
   h1 {
-    font-size: 40px;
-    line-height: 38px;
+    font-size: 32px;
+    line-height: 1em;
+    font-weight: normal;
     color: var(--color-primary);
   }
   
   h2 {
-    font-size: 32px;
-    line-height: 34px;
+    font-size: 24px;
+    line-height: 1.1em;
+    font-weight: normal;
   }
   
   h3 {
-    font-size: 24px;
-    line-height: 28px;
+    font-size: 18px;
+    line-height: 1.2em;
+    font-weight: normal;
   }
   
   p {
-    font-size: 18px;
-    line-height: 28px;
+    font-size: 15px;
+    line-height: 1.6em;
+  }
+  
+  @media screen and (min-width: 550px) {
+    h1 {
+      font-size: 40px;
+    }
+
+    h2 {
+      font-size: 32px;
+    }
+
+    h3 {
+      font-size: 24px;
+    }
+
+    p {
+      font-size: 18px;
+    }
   }
   
   a {

@@ -45,14 +45,7 @@ export const Header: React.FC<Props> = () => {
   return (
     <Container>
       <div className="inner-container">
-        <Link
-          to="/"
-          className="brand"
-          style={{
-            fontSize: `var(--font-sm)`,
-            textDecoration: `none`,
-          }}
-        >
+        <Link to="/" className="brand">
           <HeaderLogo />
         </Link>
 
