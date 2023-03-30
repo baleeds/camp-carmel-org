@@ -85,6 +85,7 @@ const Container = styled.header`
   background-color: var(--color-blank);
   display: flex;
   justify-content: center;
+  z-index: 9999;
 
   .inner-container {
     display: flex;
@@ -146,13 +147,14 @@ const Container = styled.header`
       right: 0;
       bottom: 0;
       background: white;
+      z-index: 9998;
 
       ul {
         display: block;
 
         li a {
           font-size: 18px;
-          margin: 4px 0px;
+          margin: 4px 0;
         }
       }
     }

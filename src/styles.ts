@@ -15,7 +15,7 @@ export const GlobalStyles = createGlobalStyle`
     font-family: 'Open Sans', sans-serif;
     color: var(--color-text-default);
     margin: 0;
-    padding: 0;
+    padding: 60px 0 0 0;
   }
   
   h1, h2, h3 {
