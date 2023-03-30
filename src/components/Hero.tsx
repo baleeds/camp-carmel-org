@@ -22,6 +22,7 @@ export const Hero: React.FC<Props> = ({ title, subTitle, children }): JSX.Elemen
         style={{
           width: '100%',
           height: 650,
+          maxHeight: '95vh',
           display: 'flex',
           alignItems: 'flex-end',
           justifyContent: 'center',
