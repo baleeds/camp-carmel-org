@@ -53,7 +53,7 @@ module.exports = {
         // https://css-tricks.com/meta-theme-color-and-trickery/
         theme_color: `#0B4B5E`,
         display: `minimal-ui`,
-        icon: `src/images/camp-carmel-icon.png`, // This path is relative to the root of the site.
+        icon: `src/assets/camp-carmel-icon.png`, // This path is relative to the root of the site.
       },
     },
     {
