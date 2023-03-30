@@ -5,13 +5,13 @@
  * See: https://www.gatsbyjs.com/docs/how-to/querying-data/use-static-query/
  */
 
-import * as React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import * as React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
 
 interface Props {
-    title: string;
-    children?: React.ReactNode;
-    description?: string;
+  title?: string;
+  children?: React.ReactNode;
+  description?: string;
 }
 
 export function Seo({ description, title, children }: Props): JSX.Element {
@@ -26,15 +26,17 @@ export function Seo({ description, title, children }: Props): JSX.Element {
           }
         }
       }
-    `
-  )
+    `,
+  );
 
-  const metaDescription = description || site.siteMetadata.description
-  const defaultTitle = site.siteMetadata?.title
+  const metaDescription = description || site.siteMetadata.description;
+  const defaultTitle = site.siteMetadata?.title;
 
   return (
     <>
-      <title>{defaultTitle ? `${title} | ${defaultTitle}` : title}</title>
+      <title>
+        {title ? `${title} | ${defaultTitle}` : `Camp Carmel – Christian Summer Camp for Boy & Girls – Linville, NC`}
+      </title>
       <meta name="description" content={metaDescription} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={metaDescription} />
@@ -45,5 +47,5 @@ export function Seo({ description, title, children }: Props): JSX.Element {
       <meta name="twitter:description" content={metaDescription} />
       {children}
     </>
-  )
+  );
 }

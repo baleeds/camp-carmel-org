@@ -4,6 +4,11 @@ import { StaticImage } from 'gatsby-plugin-image';
 
 import { Layout } from '../components/Layout';
 import { Seo } from '../components/Seo';
+import { Hero } from '../components/Hero';
+import { LinkButton } from '../components/LinkButton';
+import { ArrowRight } from 'react-bootstrap-icons';
+import { ContentBlock } from '../components/ContentBlock';
+import { TextSpotlight } from '../components/TextSpotlight';
 
 const links = [
   {
@@ -69,6 +74,33 @@ const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=de
 
 const IndexPage = () => (
   <Layout>
+    <Hero
+      title="Camp Carmel is an overnight summer camp tucked away in Western North Carolina that has been offering Christ-centered camps since 1952."
+      subTitle="Welcome to Camp Carmel"
+    >
+      <LinkButton to="dates" text="View our dates and rates" style="inverse" RightIcon={ArrowRight} />
+    </Hero>
+
+    <ContentBlock>
+      <TextSpotlight title="Community how God designed it.">
+        Community is at the heart of everything we do. Camp Carmel is designed to give campers an engaging space to
+        experience the joys of community living without the distractions and stresses of everyday life.
+      </TextSpotlight>
+    </ContentBlock>
+  </Layout>
+);
+
+/**
+ * Head export to define metadata for the page
+ *
+ * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
+ */
+export const Head = () => <Seo />;
+
+export default IndexPage;
+
+const old = (
+  <>
     <div>
       <StaticImage
         src="../images/example.png"
@@ -108,14 +140,5 @@ const IndexPage = () => (
         {i !== moreLinks.length - 1 && <> · </>}
       </React.Fragment>
     ))}
-  </Layout>
+  </>
 );
-
-/**
- * Head export to define metadata for the page
- *
- * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
- */
-export const Head = () => <Seo title="Home" />;
-
-export default IndexPage;
