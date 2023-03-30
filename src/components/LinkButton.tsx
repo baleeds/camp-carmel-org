@@ -12,7 +12,7 @@ interface Props {
 }
 
 export const LinkButton: React.FC<Props> = ({ style = 'ghost', size = 'default', RightIcon, to, text }) => {
-  const StyledLink: Link<unknown> = buttonMap[style] ?? LinkButtonNone;
+  const StyledLink: any = buttonMap[style] ?? LinkButtonNone;
 
   return (
     <StyledLink to={to}>
@@ -25,7 +25,7 @@ const LinkButtonNone = styled(Link)`
   color: currentColor;
   text-decoration: none;
   font-size: 18px;
-  line-height: 20px;
+  line-height: 1.1em;
   font-weight: 700;
 
   display: block;
@@ -35,6 +35,10 @@ const LinkButtonNone = styled(Link)`
 
   .icon--right {
     margin-left: 12px;
+  }
+
+  @media screen and (max-width: 550px) {
+    font-size: 16px;
   }
 `;
 
