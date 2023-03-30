@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "camp-carmel",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Camp Carmel",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Benjamin Leeds <b.a.leeds@gmail.com>",
   "dependencies": {
     "babel-plugin-styled-components": "^2.0.7",
     "gatsby": "^5.8.0",
@@ -43,9 +43,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/baleeds/camp-carmel-org"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/baleeds/camp-carmel-org/issues"
   }
 }
