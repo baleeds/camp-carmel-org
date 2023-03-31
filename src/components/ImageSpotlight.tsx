@@ -1,8 +1,6 @@
 ﻿import React from 'react';
 import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image';
 import styled from 'styled-components';
-import { useMediaQuery } from '../hooks/useMediaQuery';
-import { Tile } from './Tile';
 
 interface Props {
   image?: IGatsbyImageData;
@@ -13,16 +11,7 @@ interface Props {
 }
 
 export const ImageSpotlight: React.FC<Props> = ({ image, title, description, action, orientation }) => {
-  const isSmall = useMediaQuery('(max-width: 700px)');
-
-  if (!image) return <div>No image</div>;
-
-  if (isSmall)
-    return (
-      <div style={{ marginBottom: 48 }}>
-        <Tile image={image} title={title} description={description} action={action} />
-      </div>
-    );
+  if (!image) return null;
 
   return (
     <Container className={`image-spotlight--${orientation}`}>
@@ -40,7 +29,7 @@ export const ImageSpotlight: React.FC<Props> = ({ image, title, description, act
 };
 
 const Container = styled.div`
-  margin: 0px auto 128px;
+  margin: 0 auto 128px;
   display: flex;
   align-items: center;
 
@@ -88,5 +77,32 @@ const Container = styled.div`
   .image-spotlight__action {
     flex-shrink: 0;
     padding: 12px 28px;
+  }
+
+  // Mobile
+  @media screen and (max-width: 700px) {
+    flex-direction: column !important;
+    margin-bottom: 92px;
+
+    .image-spotlight__image {
+      margin-left: -20px !important;
+      margin-right: -20px !important;
+      margin-bottom: -70px;
+      border-radius: 0 !important;
+      box-shadow: none !important;
+    }
+
+    .image-spotlight__body {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+
+    .image-spotlight__content {
+      padding: 0 20px !important;
+    }
+
+    .image-spotlight__action {
+      padding: 0 !important;
+    }
   }
 `;

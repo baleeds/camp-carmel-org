@@ -39,6 +39,8 @@ const Container = styled.div`
     flex-basis: 250px;
     flex-shrink: 0;
     flex-grow: 0;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
   }
 
   .tile__body {
