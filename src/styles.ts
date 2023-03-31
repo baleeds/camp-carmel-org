@@ -9,6 +9,7 @@ export const GlobalStyles = createGlobalStyle`
     --color-primary: #0B4B5E;
     --color-blank: white;
     --color-text-default: #2B2B2B;
+    --color-border-light: #EEEEEE;
   }
   
   * {

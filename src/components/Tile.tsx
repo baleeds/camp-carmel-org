@@ -33,7 +33,6 @@ const Container = styled.div`
   min-height: 0;
   flex-direction: column;
   box-shadow: 0 4px 20px 0 #00000014;
-  background-color: white;
   overflow: hidden;
 
   .tile__image {
@@ -48,6 +47,7 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     padding: 8px 0;
+    background-color: white;
   }
 
   .tile__content {

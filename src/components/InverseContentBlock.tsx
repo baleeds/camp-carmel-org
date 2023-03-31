@@ -19,6 +19,7 @@ export const Container = styled.div`
   background-image: url('images/mountains-bg.svg');
   background-position: bottom;
   background-repeat: no-repeat;
-  padding: 20px;
+  padding: 64px 0;
   width: 100%;
+  background-size: contain;
 `;
