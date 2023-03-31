@@ -1,5 +1,9 @@
 ﻿import { useEffect, useState } from 'react';
 
+/**
+ * Example: `const isSmall = useMediaQuery('(max-width: 700px)');`
+ * @param query
+ */
 export function useMediaQuery(query: string): boolean {
   const getMatches = (query: string): boolean => {
     // Prevents SSR issues
