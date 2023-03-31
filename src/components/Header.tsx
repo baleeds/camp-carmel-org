@@ -57,7 +57,7 @@ export const Header: React.FC<Props> = () => {
           <nav className={isOpen ? 'is-open' : ''}>
             <ul>
               {navbarItems.map((item) => (
-                <li>
+                <li key={item.to}>
                   <Link to={item.to}>{item.displayName}</Link>
                 </li>
               ))}
@@ -79,6 +79,7 @@ const Container = styled.header`
   display: flex;
   justify-content: center;
   z-index: 9999;
+  border-bottom: 1px solid var(--color-border-light);
 
   .inner-container {
     display: flex;
