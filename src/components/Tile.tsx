@@ -14,7 +14,15 @@ export const Tile: React.FC<Props> = ({ image, title, description, action }) => 
 
   return (
     <Container>
-      <GatsbyImage alt={title} image={image} className="tile__image" />
+      <GatsbyImage
+        alt={title}
+        image={image}
+        className="tile__image"
+        imgStyle={{
+          borderTopLeftRadius: 8,
+          borderTopRightRadius: 8,
+        }}
+      />
 
       <div className="tile__body">
         <div className="tile__content">
