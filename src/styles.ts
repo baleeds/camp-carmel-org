@@ -8,9 +8,15 @@ export const GlobalStyles = createGlobalStyle`
     // Color palette
     --color-primary: #0B4B5E;
     --color-blank: white;
+    
     --color-text-default: #2B2B2B;
     --color-text-medium: #494949;
+    
     --color-border-light: #EEEEEE;
+    
+    --color-background-light: #0b4b5e17;
+    --color-background-blank: white;
+    --color-background-none: transparent;
   }
 
   * {
@@ -26,6 +32,10 @@ export const GlobalStyles = createGlobalStyle`
 
   h1, h2, h3 {
     font-family: 'Patua One', serif;
+    
+    em {
+      opacity: 0.6;
+    }
   }
 
   h1 {

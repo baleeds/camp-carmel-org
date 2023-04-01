@@ -9,7 +9,7 @@ interface Props {
 export const InverseContentBlock: React.FC<Props> = ({ children }) => {
   return (
     <Container>
-      <ContentBlock>{children}</ContentBlock>
+      <ContentBlock background={'none'}>{children}</ContentBlock>
     </Container>
   );
 };

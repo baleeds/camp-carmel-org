@@ -57,7 +57,7 @@ const Container = styled.div`
   h1,
   h2 {
     color: var(--color-blank);
-    text-shadow: 0px 4px 10px 0px #00000040;
+    text-shadow: 0px 4px 3px #00000080;
     max-width: 800px;
   }
 `;
