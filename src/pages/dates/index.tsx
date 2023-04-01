@@ -3,21 +3,19 @@ import Layout from '../../components/Layout';
 import { PageHeader } from '../../components/PageHeader';
 import { graphql, useStaticQuery } from 'gatsby';
 import { Seo } from '../../components/Seo';
-import { getImage } from 'gatsby-plugin-image';
+import { getImage, StaticImage } from 'gatsby-plugin-image';
 import { ContentBlock } from '../../components/ContentBlock';
 import { TextBlock } from '../../components/TextBlock';
 import { Divider } from '../../components/Divider';
-import { InverseContentBlock } from '../../components/InverseContentBlock';
-import { css } from 'styled-components';
 
 const IndexPage: React.FC = () => {
-  const { family } = useStaticQuery(query);
+  const { header, everyone } = useStaticQuery(query);
 
-  const familyImage = getImage(family);
+  const headerImage = getImage(header);
 
   return (
     <Layout>
-      <PageHeader title="Dates & Rates" image={familyImage} />
+      <PageHeader title="Dates & Rates" image={headerImage} />
 
       <ContentBlock>
         <TextBlock>
@@ -52,23 +50,34 @@ const IndexPage: React.FC = () => {
           <Divider />
 
           <h3>
-            Kiddie Camp <em>(Pre K - 1st grades)</em>
-          </h3>
-          <h4>July 2nd - 6th | $150</h4>
-          <p>
-            Kiddie Camp is a part-week camp, providing a way for young children to dip their toes into the camp
-            lifestyle. We focus on age-appropriate activities and hands-on learning to help these campers thrive.
-          </p>
-
-          <Divider />
-
-          <h3>
             Junior Camp <em>(2nd - 4th grades)</em>
           </h3>
           <h4>July 9th - 15th | $180</h4>
           <p>
             Junior Camp is designed to provide a safe and supportive environment where children can grow and explore
             their faith in a fun and engaging way.
+          </p>
+
+          <Divider />
+
+          <h3>
+            Junior High Camp <em>(5th - 7th grades)</em>
+          </h3>
+          <h4>June 25th - July 1st | $180</h4>
+          <p>
+            Junior High Camp is focused on helping campers discover who they are in Christ and how they can be a
+            positive force among their peers and in their communities.
+          </p>
+
+          <Divider />
+
+          <h3>
+            Youth Camp<em>(8th - 12th grades)</em>
+          </h3>
+          <h4>June 18th - 24th | $180</h4>
+          <p>
+            While at Youth Camp, campers will participate in a variety of activities that are designed to help them
+            develop key character traits, such as compassion, resilience, and self-discipline.
           </p>
         </TextBlock>
         <TextBlock>
@@ -86,7 +95,7 @@ const IndexPage: React.FC = () => {
           </h3>
           <h4>July 24th - 28th | $230</h4>
           <p>
-            Adventure Camp is a collaborative overnight camp with other Church of the Brethren affiliated camps
+            High Adventure Camp is a collaborative overnight camp with other Church of the Brethren affiliated camps
             throughout the Eastern United States. High Adventure camp is an outdoor adventure based camp where we spend
             the majority of our day off-campus experiencing the beauty of the Blue Ridge Mountains.
           </p>
@@ -99,7 +108,7 @@ const IndexPage: React.FC = () => {
           <h4>July 16th - 20th | $130</h4>
           <p>
             This is a unique opportunity for campers to make a difference in the community while developing important
-            leadership skills by engaging in hands-on service projects. Campers at this session cap the week off with
+            leadership skills by engaging in hands-on service projects. Campers at this session cap the week off with a
             candle-lit steak dinner, where they reflect with their peers on the meaningful experiences they've shared
             together.
           </p>
@@ -131,6 +140,12 @@ const IndexPage: React.FC = () => {
 
       <ContentBlock background={'light'}>
         <TextBlock>
+          <StaticImage
+            src="../../images/camp-carmel-2019-20.jpg"
+            alt="Camp is for everyone"
+            imgStyle={{ borderRadius: 8 }}
+          />
+
           <h2>Camp is For Everyone</h2>
           <h3>Keeping Costs Down</h3>
           <p>
@@ -149,7 +164,7 @@ const IndexPage: React.FC = () => {
             Camp Carmel believes that every child should have the opportunity to attend and experience the joy and
             growth that come from a summer camp experience. That's why we are grateful for the generosity of our donors
             who provide camp scholarships to families who may not be able to afford the cost of camp. Please contact our
-            director, Erica Leeds, at <a href="mailto:campcarmel1952@gmail.com">campcarmelt1952@gmail.com</a> for more
+            director, Erica Leeds, at <a href="mailto:campcarmel1952@gmail.com">campcarmel1952@gmail.com</a> for more
             information.
           </p>
         </TextBlock>
@@ -160,7 +175,7 @@ const IndexPage: React.FC = () => {
 
 const query = graphql`
   query {
-    family: file(relativePath: { eq: "camp-carmel-2019-27.jpg" }) {
+    header: file(relativePath: { eq: "junior-camp-619.jpg" }) {
       childImageSharp {
         gatsbyImageData(width: 1000, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
       }
