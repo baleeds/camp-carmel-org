@@ -1,6 +1,6 @@
 ﻿import React from 'react';
 import styled from 'styled-components';
-import { Dash, Plus, Subtract } from 'react-bootstrap-icons';
+import { Dash, Plus } from 'react-bootstrap-icons';
 
 interface Props {
   header: JSX.Element;
@@ -26,11 +26,22 @@ const Details = styled.details`
     display: flex;
     align-items: center;
     cursor: pointer;
+    list-style: none;
+
+    // Hide the default indicator
+    &::-webkit-details-marker {
+      display: none;
+    }
 
     .collapsible-section__icon {
       margin-right: 12px;
-      width: 38px;
-      height: 38px;
+      width: 32px;
+      height: 32px;
+
+      @media screen and (min-width: 550px) {
+        width: 38px;
+        height: 38px;
+      }
     }
 
     .collapsible-section__icon.close {
@@ -55,6 +66,10 @@ const Details = styled.details`
   }
 
   .collapsible-section__content {
-    padding: 0 52px;
+    padding: 0 0 0 46px;
+
+    @media screen and (min-width: 550px) {
+      padding: 0 0 0 52px;
+    }
   }
 `;
