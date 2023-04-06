@@ -9,7 +9,7 @@ import { TextBlock } from '../../components/TextBlock';
 import { Divider } from '../../components/Divider';
 
 const IndexPage: React.FC = () => {
-  const { header, everyone } = useStaticQuery(query);
+  const { header } = useStaticQuery(query);
 
   const headerImage = getImage(header);
 

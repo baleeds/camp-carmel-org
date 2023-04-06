@@ -22,16 +22,16 @@ const navbarItems: NavbarItem[] = [
     to: '/registration',
   },
   {
+    displayName: 'Parent Info',
+    to: '/parent-info',
+  },
+  {
     displayName: 'Life at Camp',
     to: '/camp',
   },
   {
     displayName: 'History & Beliefs',
     to: '/history',
-  },
-  {
-    displayName: 'Get in Touch',
-    to: '/contact',
   },
 ];
 
