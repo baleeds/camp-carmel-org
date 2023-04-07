@@ -32,27 +32,28 @@ const IndexPage: React.FC = () => {
         </TextBlock>
         <TextBlock style={{ marginBottom: 24, marginTop: 0, paddingTop: 0 }}>
           <Divider />
-          <CollapsibleSection header={<h2>Packing for Camp</h2>}>
+          <CollapsibleSection header={<h2>What should I pack for camp?</h2>}>
             <p>
               Packing for summer camp can be an exciting and sometimes overwhelming experience. In this section, we will
               provide you with a comprehensive guide on what to pack for summer camp.
             </p>
             <h4>What to bring?</h4>
             <ul>
-              <li>Bedding (sheets, blanket or sleeping bag, pillow)</li>
+              <li>Bedding for a twin-size bed (sheets, blanket or sleeping bag, pillow)</li>
               <li>Toiletries (soap, shampoo, toothbrush, deodorant)</li>
               <li>Towels for showers and swimming in the river</li>
               <li>Shoes (close-toed for activities and hiking, shower shoes, casual shoes)</li>
               <li>Clothing (layers for temperatures between 60 and 80 degrees)</li>
               <li>Appropriate sleepwear</li>
-              <li>Swim clothes (girls must wear one-piece suits)</li>
+              <li>Swim clothes (girls must wear one-piece suits or plan to wear a shirt that covers their midriffs)</li>
               <li>Medications (in original bottles with clear instructions)</li>
               <li>Insect repellent</li>
               <li>Bible (or use community Bibles)</li>
               <li>Flashlight or headlamp</li>
               <li>Water bottle</li>
+              <li>Backpack or day bag</li>
             </ul>
-            <h4>What not to bring</h4>
+            <h4>What not to bring?</h4>
             <ul>
               <li>Electronics (cell phones, tablets, music players, etc.)</li>
               <li>Weapons (knives, guns, etc.)</li>
@@ -61,15 +62,15 @@ const IndexPage: React.FC = () => {
             </ul>
           </CollapsibleSection>
           <Divider />
-          <CollapsibleSection header={<h2>Proudly Screen Free</h2>}>
+          <CollapsibleSection header={<h2>Are campers allowed to have cell phones at camp?</h2>}>
             <p>
               We believe in the importance of unplugging and being present in the moment. That's why we are proud of our
-              screen-free policy. If your camper wishes to have their phone for the trip to and from camp, we can store
+              phone-free policy. If your camper wishes to have their phone for the trip to and from camp, we can store
               cell phones securely from check-in to check-out.
             </p>
           </CollapsibleSection>
           <Divider />
-          <CollapsibleSection header={<h2>Staying in Touch</h2>}>
+          <CollapsibleSection header={<h2>How can I keep in contact with my child during camp?</h2>}>
             <p>
               We understand that being away from your child during summer camp can be difficult, but we want to
               encourage you to allow your child to fully immerse themselves in the camp experience. Homesickness is a
@@ -82,7 +83,7 @@ const IndexPage: React.FC = () => {
             </p>
           </CollapsibleSection>
           <Divider />
-          <CollapsibleSection header={<h2>What if my kid gets homesick?</h2>}>
+          <CollapsibleSection header={<h2>What if my child gets homesick?</h2>}>
             <p>
               We understand that homesickness can be a common concern for parents and campers alike, especially during
               the first few days of camp. Rest assured that our staff is trained to coach campers through this
@@ -96,7 +97,7 @@ const IndexPage: React.FC = () => {
             </p>
           </CollapsibleSection>
           <Divider />
-          <CollapsibleSection header={<h2>Pick-up & drop-off</h2>}>
+          <CollapsibleSection header={<h2>What should I expect at drop-off & pick-up?</h2>}>
             <p>
               All campers must be checked in and out at the lodge on top of the hill. The lodge is easily accessible
               from the main entrance of the camp.
@@ -108,24 +109,25 @@ const IndexPage: React.FC = () => {
               child.
             </p>
             <p>
-              Pick-up time is at 11 am on the last day of your child's session. We ask that you arrive promptly to pick
+              Pick-up time is at 10 am on the last day of your child's session. We ask that you arrive promptly to pick
               up your child. If you need to make special arrangements for pick-up, please let us know in advance.
             </p>
           </CollapsibleSection>
           <Divider />
-          <CollapsibleSection header={<h2>Dietary needs</h2>}>
+          <CollapsibleSection header={<h2>What if my camper has dietary restrictions?</h2>}>
             <p>
               We believe that healthy food is an important part of your child's experience at camp and we take pride in
               providing nutritious and delicious meals. If your child has any allergies or dietary needs, please let us
-              know during the registration process so that we can make the necessary arrangements
+              know during the registration process so that we can make the necessary arrangements well in advance.
             </p>
           </CollapsibleSection>
           <Divider />
-          <CollapsibleSection header={<h2>Medical needs</h2>}>
+          <CollapsibleSection header={<h2>What if my camper has medications?</h2>}>
             <p>
               If your child has any medications that they need to take while at camp, we ask that you send them in their
-              original container, clearly labeled with your child's name, dosage instructions, and the name of the
-              medication. This helps us ensure that your child is receiving the correct medication at the correct time.
+              originally prescribed container, clearly labeled with your child's name, dosage instructions, and the name
+              of the medication. This helps us ensure that your child is receiving the correct medication at the correct
+              time.
             </p>
           </CollapsibleSection>
           <Divider />

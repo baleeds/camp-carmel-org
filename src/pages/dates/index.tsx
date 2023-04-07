@@ -39,7 +39,7 @@ const IndexPage: React.FC = () => {
           <Divider />
 
           <h3>
-            Kiddie Camp <em>(Pre K - 1st grades)</em>
+            Kiddie Camp <em>(Rising Kindergarten - 2nd grade)</em>
           </h3>
           <h4>July 2nd - 6th | $150</h4>
           <p>
@@ -50,7 +50,7 @@ const IndexPage: React.FC = () => {
           <Divider />
 
           <h3>
-            Junior Camp <em>(2nd - 4th grades)</em>
+            Junior Camp <em>(Rising 3rd - 5th grade)</em>
           </h3>
           <h4>July 9th - 15th | $180</h4>
           <p>
@@ -61,7 +61,7 @@ const IndexPage: React.FC = () => {
           <Divider />
 
           <h3>
-            Junior High Camp <em>(5th - 7th grades)</em>
+            Junior High Camp <em>(Rising 6th - 8th grade)</em>
           </h3>
           <h4>June 25th - July 1st | $180</h4>
           <p>
@@ -72,7 +72,7 @@ const IndexPage: React.FC = () => {
           <Divider />
 
           <h3>
-            Youth Camp<em>(8th - 12th grades)</em>
+            Youth Camp <em>(Rising 9th - current 12th grade)</em>
           </h3>
           <h4>June 18th - 24th | $180</h4>
           <p>

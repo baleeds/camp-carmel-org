@@ -68,6 +68,10 @@ export const GlobalStyles = createGlobalStyle`
     font-size: 15px;
     line-height: 1.6em;
   }
+  
+  li {
+    margin-bottom: 8px;
+  }
 
   @media screen and (min-width: 550px) {
     h1 {
