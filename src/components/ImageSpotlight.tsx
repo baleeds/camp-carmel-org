@@ -1,20 +1,21 @@
-﻿import React from 'react';
+﻿import React, { CSSProperties } from 'react';
 import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image';
 import styled from 'styled-components';
 
 interface Props {
-  image?: IGatsbyImageData;
+  image: IGatsbyImageData | undefined;
   title: string;
   description: string;
   action: React.ReactNode;
   orientation: 'left' | 'right';
+  style?: CSSProperties;
 }
 
-export const ImageSpotlight: React.FC<Props> = ({ image, title, description, action, orientation }) => {
+export const ImageSpotlight: React.FC<Props> = ({ image, title, description, action, orientation, style }) => {
   if (!image) return null;
 
   return (
-    <Container className={`image-spotlight--${orientation}`}>
+    <Container className={`image-spotlight--${orientation}`} style={style}>
       <GatsbyImage alt={title} image={image} className="image-spotlight__image" />
 
       <div className="image-spotlight__body">

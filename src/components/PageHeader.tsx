@@ -27,13 +27,13 @@ export const PageHeader: React.FC<Props> = ({ image, title }) => {
 
 const Background = styled(BackgroundImg)`
   width: 100%;
-  height: 250px;
+  height: 350px;
   display: flex;
   align-items: flex-end;
   justify-content: center;
 
   @media screen and (min-width: 700px) {
-    height: 400px;
+    height: 500px;
   }
 `;
 

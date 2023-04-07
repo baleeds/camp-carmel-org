@@ -64,7 +64,7 @@ export const GlobalStyles = createGlobalStyle`
     margin-bottom: .2em;
   }
 
-  p {
+  li, p {
     font-size: 15px;
     line-height: 1.6em;
   }
@@ -86,7 +86,7 @@ export const GlobalStyles = createGlobalStyle`
       font-size: 18px;
     }
 
-    p {
+    p, li {
       font-size: 18px;
     }
   }

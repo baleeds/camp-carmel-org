@@ -1,15 +1,16 @@
 ﻿import styled from 'styled-components';
-import React from 'react';
+import React, { CSSProperties } from 'react';
 
 interface Props {
   background: 'blank' | 'light' | 'none';
   className?: string;
+  style?: CSSProperties;
   children?: React.ReactNode;
 }
 
-const UnstyledContentBlock: React.FC<Props> = ({ className, children }) => {
+const UnstyledContentBlock: React.FC<Props> = ({ className, children, style }) => {
   return (
-    <div className={className}>
+    <div className={className} style={style}>
       <div className="content-block__inner">{children}</div>
     </div>
   );

@@ -177,7 +177,7 @@ const query = graphql`
   query {
     header: file(relativePath: { eq: "junior-camp-619.jpg" }) {
       childImageSharp {
-        gatsbyImageData(width: 1000, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+        gatsbyImageData(width: 2000, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
       }
     }
   }
