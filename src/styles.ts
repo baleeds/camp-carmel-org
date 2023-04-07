@@ -21,6 +21,9 @@ export const GlobalStyles = createGlobalStyle`
 
   * {
     box-sizing: border-box;
+    
+    scroll-margin-top: 72px;
+    scroll-snap-margin-top: 72px; /* iOS 11 and older */
   }
 
   html, body {

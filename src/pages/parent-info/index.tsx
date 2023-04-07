@@ -32,7 +32,7 @@ const IndexPage: React.FC = () => {
         </TextBlock>
         <TextBlock style={{ marginBottom: 24, marginTop: 0, paddingTop: 0 }}>
           <Divider />
-          <CollapsibleSection header={<h2>What should I pack for camp?</h2>}>
+          <CollapsibleSection id="packing-list" header={<h2>What should I pack for camp?</h2>}>
             <p>
               Packing for summer camp can be an exciting and sometimes overwhelming experience. In this section, we will
               provide you with a comprehensive guide on what to pack for summer camp.

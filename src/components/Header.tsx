@@ -113,6 +113,8 @@ const Container = styled.header`
       align-items: center;
 
       li {
+        margin: 0 !important;
+
         a {
           padding: 8px 16px;
           margin: 0;
@@ -140,6 +142,7 @@ const Container = styled.header`
       left: 0;
       right: 0;
       bottom: 0;
+      padding-top: 16px;
       background: white;
       z-index: 9998;
 
@@ -162,4 +165,8 @@ const Container = styled.header`
 const HeaderLogo = styled(Logo)`
   height: 40px;
   display: block;
+
+  @media screen and (max-width: 1000px) {
+    height: 34px;
+  }
 `;

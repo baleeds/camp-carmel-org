@@ -71,7 +71,7 @@ const IndexPage = () => {
             image={whatToBringImage}
             title="What to bring to camp?"
             description="The right gear can make all the difference in creating a comfortable and enjoyable camp environment. Our packing list includes all the supplies you'll need to make memories that last a lifetime!"
-            action={<LinkButton to="/camp" text="Read more" RightIcon={ArrowRight} />}
+            action={<LinkButton to="/parent-info#packing-list" text="Read more" RightIcon={ArrowRight} />}
           />
           <Tile
             image={leadersImage}

@@ -3,13 +3,16 @@ import styled from 'styled-components';
 import { Dash, Plus } from 'react-bootstrap-icons';
 
 interface Props {
+  id?: string;
   header: JSX.Element;
   children: JSX.Element;
 }
 
-export const CollapsibleSection: React.FC<Props> = ({ header, children }) => {
+export const CollapsibleSection: React.FC<Props> = ({ id, header, children }) => {
+  const openAtStart = document.location.hash === `#${id}`;
+
   return (
-    <Details>
+    <Details id={id} open={openAtStart}>
       <summary>
         <Plus className="collapsible-section__icon open" />
         <Dash className="collapsible-section__icon close" />
@@ -22,6 +25,9 @@ export const CollapsibleSection: React.FC<Props> = ({ header, children }) => {
 };
 
 const Details = styled.details`
+  scroll-margin-top: 80px;
+  scroll-snap-margin-top: 80px; /* iOS 11 and older */
+
   summary {
     display: flex;
     align-items: center;
@@ -37,6 +43,7 @@ const Details = styled.details`
       margin-right: 12px;
       width: 32px;
       height: 32px;
+      flex-shrink: 0;
 
       @media screen and (min-width: 550px) {
         width: 38px;
