@@ -6,10 +6,11 @@ interface Props {
   id?: string;
   header: JSX.Element;
   children: JSX.Element;
+  location?: Location;
 }
 
-export const CollapsibleSection: React.FC<Props> = ({ id, header, children }) => {
-  const openAtStart = document.location.hash === `#${id}`;
+export const CollapsibleSection: React.FC<Props> = ({ id, header, location, children }) => {
+  const openAtStart = location?.hash === `#${id}`;
 
   return (
     <Details id={id} open={openAtStart}>

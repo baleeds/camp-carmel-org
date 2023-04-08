@@ -1,5 +1,5 @@
 ﻿import React from 'react';
-import { graphql, Link, useStaticQuery } from 'gatsby';
+import { graphql, Link, PageProps, useStaticQuery } from 'gatsby';
 import { getImage, StaticImage } from 'gatsby-plugin-image';
 import Layout from '../../components/Layout';
 import { PageHeader } from '../../components/PageHeader';
@@ -12,7 +12,7 @@ import { ImageSpotlight } from '../../components/ImageSpotlight';
 import { ArrowRight } from 'react-bootstrap-icons';
 import { LinkButton } from '../../components/LinkButton';
 
-const IndexPage: React.FC = () => {
+const IndexPage: React.FC<PageProps> = ({ location }) => {
   const { header, additionalQuestions } = useStaticQuery(query);
 
   const headerImage = getImage(header);
@@ -32,7 +32,7 @@ const IndexPage: React.FC = () => {
         </TextBlock>
         <TextBlock style={{ marginBottom: 24, marginTop: 0, paddingTop: 0 }}>
           <Divider />
-          <CollapsibleSection id="packing-list" header={<h2>What should I pack for camp?</h2>}>
+          <CollapsibleSection id="packing-list" header={<h2>What should I pack for camp?</h2>} location={location}>
             <p>
               Packing for summer camp can be an exciting and sometimes overwhelming experience. In this section, we will
               provide you with a comprehensive guide on what to pack for summer camp.
