@@ -77,19 +77,19 @@ const IndexPage = () => {
             image={leadersImage}
             title="Trustworthy leadership"
             description="At our camp, we believe that good leadership starts with leading by example. Our counselors are trained in creating a safe, supportive, and fun environment for campers."
-            action={<LinkButton to="/history" text="Read more" RightIcon={ArrowRight} />}
+            action={<LinkButton to="/camp#counselors" text="Read more" RightIcon={ArrowRight} />}
           />
           <Tile
             image={dayInTheLifeImage}
             title="A day in the life of a camper"
             description="Each day is a unique opportunity to learn, grow, and create memories. Starting with morning watch and ending around a campfire, campers will engage in a variety of activities from hiking and swimming to arts and crafts and team-building games."
-            action={<LinkButton to="/camp" text="Read more" RightIcon={ArrowRight} />}
+            action={<LinkButton to="/camp#activities" text="Read more" RightIcon={ArrowRight} />}
           />
           <Tile
             image={foodImage}
             title="Food and lodging"
             description="Food and lodging play a critical role in ensuring that campers have the energy and rest they need to make the most of their camp experience. That's why at our camp, we strive to provide balanced meals and comfortable accommodations."
-            action={<LinkButton to="/camp" text="Read more" RightIcon={ArrowRight} />}
+            action={<LinkButton to="/camp#nutrition" text="Read more" RightIcon={ArrowRight} />}
           />
         </GridLayout>
       </InverseContentBlock>

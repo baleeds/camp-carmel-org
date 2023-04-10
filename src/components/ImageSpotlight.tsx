@@ -3,25 +3,41 @@ import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image';
 import styled from 'styled-components';
 
 interface Props {
+  id?: string;
   image: IGatsbyImageData | undefined;
   title: string;
   description: string;
+  children?: JSX.Element;
   action: React.ReactNode;
   orientation: 'left' | 'right';
   style?: CSSProperties;
 }
 
-export const ImageSpotlight: React.FC<Props> = ({ image, title, description, action, orientation, style }) => {
+export const ImageSpotlight: React.FC<Props> = ({
+  id,
+  image,
+  title,
+  description,
+  action,
+  orientation,
+  style,
+  children,
+}) => {
   if (!image) return null;
 
   return (
-    <Container className={`image-spotlight--${orientation}`} style={style}>
+    <Container
+      id={id}
+      className={`image-spotlight--${orientation} image-spotlight--${children ? 'large' : 'small'}`}
+      style={style}
+    >
       <GatsbyImage alt={title} image={image} className="image-spotlight__image" />
 
       <div className="image-spotlight__body">
         <div className="image-spotlight__content">
           <h2>{title}</h2>
-          <p>{description}</p>
+          {description && <p>{description}</p>}
+          {children}
         </div>
         <div className="image-spotlight__action">{action}</div>
       </div>
@@ -67,6 +83,12 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     border-radius: 8px;
+  }
+
+  &.image-spotlight--large {
+    .image-spotlight__body {
+      flex: 3;
+    }
   }
 
   .image-spotlight__content {

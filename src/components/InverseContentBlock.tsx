@@ -16,7 +16,7 @@ export const InverseContentBlock: React.FC<Props> = ({ children }) => {
 
 export const Container = styled.div`
   background-color: var(--color-primary);
-  background-image: url('images/mountains-bg.svg');
+  background-image: url('/images/mountains-bg.svg');
   background-position: bottom;
   background-repeat: no-repeat;
   padding: 64px 0;
