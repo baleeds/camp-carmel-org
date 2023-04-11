@@ -19,7 +19,7 @@ const IndexPage: React.FC = () => {
     <Layout>
       <PageHeader image={headerImage} />
 
-      <ContentBlock>
+      <ContentBlock background={'light'}>
         <TextBlock>
           <h1>We're Here to Help!</h1>
           <p>

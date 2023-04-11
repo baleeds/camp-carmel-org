@@ -58,7 +58,7 @@ export const ContactForm: React.FC<Props> = () => {
     <>
       <h4>Send us a message</h4>
       <p>Feel free to message us directly using our website and we will respond by email.</p>
-      <Container onSubmit={handleSubmit} netlify-honeypot="title" data-netlify="true" name="contact">
+      <Container onSubmit={handleSubmit} data-netlify-honeypot={'title'} data-netlify="true" name="contact">
         <div className="input-block">
           <label htmlFor="name">Full name</label>
           <input name="name" onChange={(e) => setName(e.target.value)} value={name} type="text" />
@@ -66,7 +66,7 @@ export const ContactForm: React.FC<Props> = () => {
 
         <div className="input-block">
           <label htmlFor="title">Title</label>
-          <input name="title" onChange={(e) => setTitle(e.target.value)} value={title} type="email" />
+          <input name="title" onChange={(e) => setTitle(e.target.value)} value={title} type="text" />
         </div>
 
         <div className="input-block">
