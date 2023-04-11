@@ -25,9 +25,7 @@ const IndexPage: React.FC = () => {
       <ContentBlock background={'light'}>
         <TextBlock>
           <h2>Beliefs</h2>
-          <p>
-            Coming soon..
-          </p>
+          <p>Coming soon..</p>
         </TextBlock>
       </ContentBlock>
     </Layout>
@@ -36,7 +34,7 @@ const IndexPage: React.FC = () => {
 
 const query = graphql`
   query {
-    header: file(relativePath: { eq: "junior-camp-591.jpg" }) {
+    header: file(relativePath: { eq: "junior-camp-606.jpg" }) {
       childImageSharp {
         gatsbyImageData(width: 2000, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
       }

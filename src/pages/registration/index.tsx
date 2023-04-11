@@ -133,7 +133,7 @@ const IndexPage: React.FC = () => {
 
 const query = graphql`
   query {
-    header: file(relativePath: { eq: "junior-camp-591.jpg" }) {
+    header: file(relativePath: { eq: "camp-carmel-summer16-12.jpg" }) {
       childImageSharp {
         gatsbyImageData(width: 2000, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
       }

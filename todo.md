@@ -1,4 +1,2 @@
 ﻿# Todo list
-- [ ] Contact page
-- [ ] Menu page
-- [ ] Schedule page
+- [ ] History & Beliefs page (and update links)
