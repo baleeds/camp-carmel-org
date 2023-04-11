@@ -18,7 +18,7 @@ export const TextSpotlight: React.FC<Props> = ({ title, children }) => (
 );
 
 const Container = styled.div`
-  margin: 124px 0;
+  padding: 124px 0;
   display: flex;
   justify-content: center;
 

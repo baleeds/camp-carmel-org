@@ -163,10 +163,10 @@ const Container = styled.header`
 `;
 
 const HeaderLogo = styled(Logo)`
-  height: 40px;
+  height: 36px;
   display: block;
 
   @media screen and (max-width: 1000px) {
-    height: 34px;
+    height: 30px;
   }
 `;

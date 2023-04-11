@@ -83,7 +83,7 @@ const IndexPage = () => {
             image={dayInTheLifeImage}
             title="A day in the life of a camper"
             description="Each day is a unique opportunity to learn, grow, and create memories. Starting with morning watch and ending around a campfire, campers will engage in a variety of activities from hiking and swimming to arts and crafts and team-building games."
-            action={<LinkButton to="/camp#activities" text="Read more" RightIcon={ArrowRight} />}
+            action={<LinkButton to="/camp/schedule" text="Read more" RightIcon={ArrowRight} />}
           />
           <Tile
             image={foodImage}

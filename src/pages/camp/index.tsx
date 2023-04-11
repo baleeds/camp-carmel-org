@@ -191,6 +191,6 @@ const query = graphql`
   }
 `;
 
-export const Head = () => <Seo title="2023 Dates & Rates" />;
+export const Head = () => <Seo title="Life at Camp" />;
 
 export default IndexPage;
