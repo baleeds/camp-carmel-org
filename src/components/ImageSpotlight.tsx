@@ -1,4 +1,4 @@
-﻿import React, { CSSProperties } from 'react';
+﻿import React, { CSSProperties, ReactNode } from 'react';
 import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image';
 import styled from 'styled-components';
 
@@ -6,11 +6,11 @@ interface Props {
   id?: string;
   image: IGatsbyImageData | undefined;
   title: string;
-  description: string;
-  children?: JSX.Element;
-  action: React.ReactNode;
+  description?: string;
+  action?: React.ReactNode;
   orientation: 'left' | 'right';
   style?: CSSProperties;
+  children?: ReactNode;
 }
 
 export const ImageSpotlight: React.FC<Props> = ({
@@ -39,7 +39,7 @@ export const ImageSpotlight: React.FC<Props> = ({
           {description && <p>{description}</p>}
           {children}
         </div>
-        <div className="image-spotlight__action">{action}</div>
+        {action && <div className="image-spotlight__action">{action}</div>}
       </div>
     </Container>
   );

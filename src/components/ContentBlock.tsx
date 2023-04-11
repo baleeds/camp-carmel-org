@@ -2,7 +2,7 @@
 import React, { CSSProperties } from 'react';
 
 interface Props {
-  background: 'blank' | 'light' | 'none';
+  background?: 'blank' | 'light' | 'none';
   className?: string;
   style?: CSSProperties;
   children?: React.ReactNode;

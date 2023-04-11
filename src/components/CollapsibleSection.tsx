@@ -4,8 +4,8 @@ import { Dash, Plus } from 'react-bootstrap-icons';
 
 interface Props {
   id?: string;
-  header: JSX.Element;
-  children: JSX.Element;
+  header: React.ReactNode;
+  children: React.ReactNode;
   location?: Location;
 }
 

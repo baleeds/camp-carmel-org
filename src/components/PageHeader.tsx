@@ -10,8 +10,9 @@ interface Props {
 }
 
 export const PageHeader: React.FC<Props> = ({ image, title }) => {
-  if (!image) return null;
   const bgImage = convertToBgImage(image);
+
+  if (!image) return null;
 
   return (
     <div>
@@ -23,7 +24,7 @@ export const PageHeader: React.FC<Props> = ({ image, title }) => {
   );
 };
 
-const Background = styled(BackgroundImg)`
+const Background: any = styled(BackgroundImg)`
   width: 100%;
   height: 350px;
   display: flex;
