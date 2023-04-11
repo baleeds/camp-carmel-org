@@ -1,6 +1,6 @@
 ﻿import React, { FormEvent, useState } from 'react';
 import styled from 'styled-components';
-import { HeartArrow, Send } from 'react-bootstrap-icons';
+import { HeartArrow } from 'react-bootstrap-icons';
 
 interface Props {}
 
@@ -13,7 +13,7 @@ const encode = (data: Record<string, any>): string => {
 export const ContactForm: React.FC<Props> = () => {
   const [status, setStatus] = useState<'entry' | 'submitting' | 'success' | 'error'>('entry');
   const [name, setName] = useState('');
-  const [title, setTitle] = useState(''); // This is the honeypot field
+  const [subject, setSubject] = useState(''); // This is the honeypot field
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [message, setMessage] = useState('');
@@ -26,7 +26,7 @@ export const ContactForm: React.FC<Props> = () => {
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({ 'form-name': 'contact', name, email, phoneNumber: phone, message, title }),
+      body: encode({ 'form-name': 'contact', name, email, phoneNumber: phone, message, subject }),
     })
       .then(() => {
         setStatus('success');
@@ -58,15 +58,15 @@ export const ContactForm: React.FC<Props> = () => {
     <>
       <h4>Send us a message</h4>
       <p>Feel free to message us directly using our website and we will respond by email.</p>
-      <Container onSubmit={handleSubmit} data-netlify-honeypot={'title'} data-netlify="true" name="contact">
+      <Container onSubmit={handleSubmit} data-netlify-honeypot={'subject'} data-netlify="true" name="contact">
         <div className="input-block">
           <label htmlFor="name">Full name</label>
           <input name="name" onChange={(e) => setName(e.target.value)} value={name} type="text" />
         </div>
 
-        <div className="input-block">
-          <label htmlFor="title">Title</label>
-          <input name="title" onChange={(e) => setTitle(e.target.value)} value={title} type="text" />
+        <div className="input-block input-block--subject-field">
+          <label htmlFor="subject">Subject (required)</label>
+          <input name="subject" onChange={(e) => setSubject(e.target.value)} value={subject} type="text" />
         </div>
 
         <div className="input-block">
@@ -99,7 +99,7 @@ const Container = styled.form`
   min-height: 0;
   gap: 24px;
 
-  .input-block__title-field {
+  .input-block__subject-field {
     display: none;
   }
 
