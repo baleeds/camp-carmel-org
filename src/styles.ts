@@ -7,6 +7,7 @@ export const GlobalStyles = createGlobalStyle`
 
     // Color palette
     --color-primary: #0B4B5E;
+    --color-primary-light: #316d7e;
     --color-blank: white;
     
     --color-text-default: #2B2B2B;

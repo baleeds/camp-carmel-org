@@ -126,9 +126,9 @@ const IndexPage: React.FC = () => {
             evening to help tide them over until breakfast. We understand that campers work up quite an appetite during
             their time here, and we make sure that they leave each meal feeling full and satisfied.
           </p>
-          <p>
-            <LinkButton to="./menu" style="outline" text="View a sample menu" RightIcon={ArrowRight} />
-          </p>
+          {/*<p>*/}
+          {/*  <LinkButton to="./menu" style="outline" text="View a sample menu" RightIcon={ArrowRight} />*/}
+          {/*</p>*/}
         </TextBlock>
       </ContentBlock>
 

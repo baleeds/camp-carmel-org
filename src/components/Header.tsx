@@ -58,7 +58,9 @@ export const Header: React.FC<Props> = () => {
             <ul>
               {navbarItems.map((item) => (
                 <li key={item.to}>
-                  <Link to={item.to}>{item.displayName}</Link>
+                  <Link to={item.to} activeClassName="active">
+                    {item.displayName}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -118,13 +120,21 @@ const Container = styled.header`
         a {
           padding: 8px 16px;
           margin: 0;
-          color: var(--color-primary);
+          color: var(--color-primary-light);
           text-decoration: none;
           //text-transform: uppercase;
           font-size: 16px;
           white-space: nowrap;
           font-weight: bold;
           display: inline-block;
+
+          &:hover {
+            color: var(--color-primary);
+          }
+
+          &.active {
+            color: var(--color-text-primary);
+          }
         }
       }
     }

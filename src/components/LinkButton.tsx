@@ -43,16 +43,24 @@ const LinkButtonNone = styled(Link)`
 `;
 
 const LinkButtonGhost = styled(LinkButtonNone)`
-  color: var(--color-primary);
+  color: var(--color-primary-light);
   display: inline-flex;
   align-items: center;
   justify-content: center;
   padding: 12px 20px;
   border-radius: 4px;
+
+  &:hover {
+    color: var(--color-primary);
+  }
 `;
 
 const LinkButtonOutline = styled(LinkButtonGhost)`
-  border: 1.5px solid var(--color-primary);
+  border: 1.5px solid var(--color-primary-light);
+
+  &:hover {
+    border-color: var(--color-primary);
+  }
 `;
 
 const LinkButtonInverse = styled(LinkButtonGhost)`
