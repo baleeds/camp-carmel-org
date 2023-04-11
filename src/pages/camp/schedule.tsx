@@ -42,8 +42,8 @@ const IndexPage: React.FC = () => {
           />
           <h2>Every Day is Different</h2>
           <p>
-            Camp schedules vary by age-group, camp theme, day, and many other factors. To help illustrate what camper's
-            day may look like, we've distilled this schedule.
+            Camp schedules vary by age-group, camp theme, day, and many other factors. We've created this sample
+            schedule to help illustrate what camper's day may look like. Bedtimes vary widely based on age-group.
           </p>
           <p>
             <ul>
@@ -62,7 +62,7 @@ const IndexPage: React.FC = () => {
               <li>3:00pm - Hands-on Craft Time (painting, origami, lanyards, etc.)</li>
               <li>4:00pm - High-energy Structured Activity</li>
               <li>5:00pm - Wind-down Activity</li>
-              <li>5:45pm - Dinner</li>
+              <li>5:45pm - Supper</li>
               <li>6:30pm - Evening Worship and Devotion</li>
               <li>7:15pm - High-energy Structured Activity</li>
               <li>8:45pm - Snack</li>

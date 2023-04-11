@@ -16,6 +16,7 @@ export const GlobalStyles = createGlobalStyle`
     --color-border-light: #EEEEEE;
     
     --color-background-light: #0b4b5e17;
+    --color-background-medium: #d6e3e7;
     --color-background-blank: white;
     --color-background-none: transparent;
   }

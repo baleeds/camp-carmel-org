@@ -6,7 +6,7 @@ import styled from 'styled-components';
 
 interface Props {
   image?: IGatsbyImageData;
-  title: string;
+  title?: string;
 }
 
 export const PageHeader: React.FC<Props> = ({ image, title }) => {
@@ -17,9 +17,7 @@ export const PageHeader: React.FC<Props> = ({ image, title }) => {
     <div>
       <Background {...bgImage}>
         <Shadow />
-        <Container>
-          <h1>{title}</h1>
-        </Container>
+        <Container>{title && <h1>{title}</h1>}</Container>
       </Background>
     </div>
   );

@@ -28,7 +28,7 @@ const IndexPage: React.FC = () => {
         <TextBlock>
           <h1>Home away from home</h1>
           <p>
-            Camp Carmel is nestled in the small town of Linville, NC. Our campus spans 52 acres of mountainous terrain,
+            Camp Carmel is nestled in the small town of Linville, NC. Our campus spans 48 acres of mountainous terrain,
             surrounded by the natural beauty of the Blue Ridge Mountains, and boasts a variety of hiking trails, unique
             natural landmarks, and access to the pristine Linville River.
           </p>
@@ -43,7 +43,7 @@ const IndexPage: React.FC = () => {
             and comfortable space to call home during their stay.
           </p>
           <p>
-            Our cabins are separated into two sections: one for boys and one for girls. Each gender's section shares a
+            Our cabins are located in two different areas: an area for boys and an area for girls. Each area has a
             well-maintained, climate controlled bathhouse for showering and other hygiene needs.
           </p>
         </ImageSpotlight>
@@ -95,8 +95,8 @@ const IndexPage: React.FC = () => {
         >
           <p>
             Spiritual growth is just as important as physical and mental growth. We have an ecumenical Bible curriculum
-            developed by the Brethren Press that is engaging, thought-provoking, and age-appropriate. Our curriculum
-            includes interactive lessons, small group discussions, and individual reflections.
+            that is engaging, thought-provoking, and age-appropriate. Our curriculum includes interactive lessons, small
+            group discussions, and individual reflections.
           </p>
           <p>
             Through our Bible curriculum, campers will learn about the teachings of Jesus and explore how to apply them
@@ -122,9 +122,9 @@ const IndexPage: React.FC = () => {
           </p>
           <p>
             We serve a full breakfast to get our campers fueled up for a fun-filled day, and meals are served
-            cafeteria-style. After lunch and dinner, dessert is always on the menu, and campers receive a snack in the
-            evening to help tide them over until breakfast. We understand that campers work up quite an appetite during
-            their time here, and we make sure that they leave each meal feeling full and satisfied.
+            cafeteria-style. Besides breakfast, lunch, and supper, campers receive a snack in the evening to help tide
+            them over until breakfast. We understand that campers work up quite an appetite during their time here, and
+            we make sure that they leave each meal feeling full and satisfied.
           </p>
           {/*<p>*/}
           {/*  <LinkButton to="./menu" style="outline" text="View a sample menu" RightIcon={ArrowRight} />*/}
