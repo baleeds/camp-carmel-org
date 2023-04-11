@@ -7,7 +7,6 @@ import { getImage } from 'gatsby-plugin-image';
 import { ContentBlock } from '../../components/ContentBlock';
 import { TextBlock } from '../../components/TextBlock';
 import { InsetBlock } from '../../components/InsetBlock';
-import { Divider } from '../../components/Divider';
 import { ContactForm } from '../../components/ContactForm';
 
 const IndexPage: React.FC = () => {
@@ -44,12 +43,6 @@ const IndexPage: React.FC = () => {
           </InsetBlock>
         </TextBlock>
       </ContentBlock>
-      {/*<ContentBlock background={'light'}>*/}
-      {/*  <TextBlock>*/}
-      {/*    <h2>Message us directly</h2>*/}
-      {/*    <p>Coming soon..</p>*/}
-      {/*  </TextBlock>*/}
-      {/*</ContentBlock>*/}
     </Layout>
   );
 };

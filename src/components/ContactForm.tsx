@@ -1,4 +1,4 @@
-﻿import React, { FormEvent, useState } from 'react';
+﻿import React, { FormEvent, useRef, useState } from 'react';
 import styled from 'styled-components';
 import { HeartArrow } from 'react-bootstrap-icons';
 
@@ -17,6 +17,7 @@ export const ContactForm: React.FC<Props> = () => {
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [message, setMessage] = useState('');
+  const scrollRef = useRef<HTMLHeadingElement | null>(null);
 
   const isValid = name && email && email.includes('@') && message;
 
@@ -31,7 +32,10 @@ export const ContactForm: React.FC<Props> = () => {
       .then(() => {
         setStatus('success');
       })
-      .catch(() => setStatus('error'));
+      .catch(() => setStatus('error'))
+      .finally(() => {
+        scrollRef.current?.scrollIntoView();
+      });
 
     e.preventDefault();
   };
@@ -39,7 +43,7 @@ export const ContactForm: React.FC<Props> = () => {
   if (status === 'error') {
     return (
       <>
-        <h4>This is embarrassing...</h4>
+        <h4 id="contact-form__message">This is embarrassing...</h4>
         <p>We've encountered an issue with our form. Please contact us directly using one of the methods above.</p>
       </>
     );
@@ -48,7 +52,7 @@ export const ContactForm: React.FC<Props> = () => {
   if (status === 'success') {
     return (
       <>
-        <h4>Message sent!</h4>
+        <h4 id="contact-form__message">Message sent!</h4>
         <p>Thank you for contacting us. We will get in touch with you shortly.</p>
       </>
     );
@@ -56,7 +60,7 @@ export const ContactForm: React.FC<Props> = () => {
 
   return (
     <>
-      <h4>Send us a message</h4>
+      <h4 ref={scrollRef}>Send us a message</h4>
       <p>Feel free to message us directly using our website and we will respond by email.</p>
       <Container onSubmit={handleSubmit} data-netlify-honeypot={'subject'} data-netlify="true" name="contact">
         <div className="input-block">

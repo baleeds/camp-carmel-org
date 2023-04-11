@@ -8,7 +8,7 @@ import { ContentBlock } from '../../components/ContentBlock';
 import { InverseTextBlock, TextBlock } from '../../components/TextBlock';
 import { Divider } from '../../components/Divider';
 import { LinkButton } from '../../components/LinkButton';
-import { ArrowRight, Paperclip } from 'react-bootstrap-icons';
+import { Paperclip } from 'react-bootstrap-icons';
 import { InverseContentBlock } from '../../components/InverseContentBlock';
 import { InsetBlock } from '../../components/InsetBlock';
 
@@ -118,11 +118,6 @@ const IndexPage: React.FC = () => {
       <InverseContentBlock>
         <InverseTextBlock>
           <h2>We're Here to Help</h2>
-          <p>
-            We understand that registering for camp can sometimes feel like a daunting process, especially if it's your
-            child's first time away from home. We want to assure you that our camp team is here to support you every
-            step of the way.
-          </p>
           <p>
             If you have any questions or concerns about the registration process, camp activities, or any other aspect
             of our program, please feel free to reach out to our Camp Manager. We are more than happy to provide you
