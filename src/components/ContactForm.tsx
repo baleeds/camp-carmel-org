@@ -26,7 +26,7 @@ export const ContactForm: React.FC<Props> = () => {
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({ 'form-name': 'contact', name, email, phoneNumber: phone, message, subject }),
+      body: encode({ 'form-name': 'contact', name, email, phone, message, subject }),
     })
       .then(() => {
         setStatus('success');
