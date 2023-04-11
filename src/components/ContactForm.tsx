@@ -64,7 +64,7 @@ export const ContactForm: React.FC<Props> = () => {
           <input name="name" onChange={(e) => setName(e.target.value)} value={name} type="text" />
         </div>
 
-        <div className="input-block input-block__title-field">
+        <div className="input-block">
           <label htmlFor="title">Title</label>
           <input name="title" onChange={(e) => setTitle(e.target.value)} value={title} type="email" />
         </div>
