@@ -8,6 +8,8 @@ export const GlobalStyles = createGlobalStyle`
     // Color palette
     --color-primary: #0B4B5E;
     --color-primary-light: #316d7e;
+    --color-secondary: #0b71c3;
+    --color-secondary-light: #2989d7;
     --color-blank: white;
     
     --color-text-default: #2B2B2B;
@@ -33,6 +35,11 @@ export const GlobalStyles = createGlobalStyle`
     color: var(--color-text-default);
     margin: 0;
     padding: 0;
+  }
+  
+  input, textarea, button {
+    font-family: 'Open Sans', sans-serif;
+    color: var(--color-text-default);
   }
 
   h1, h2, h3 {
@@ -69,7 +76,7 @@ export const GlobalStyles = createGlobalStyle`
     margin-bottom: .2em;
   }
 
-  li, p {
+  li, p, label, input, textarea {
     font-size: 15px;
     line-height: 1.6em;
   }
@@ -95,7 +102,7 @@ export const GlobalStyles = createGlobalStyle`
       font-size: 18px;
     }
 
-    p, li {
+    p, li, label, input, textarea {
       font-size: 18px;
     }
   }
