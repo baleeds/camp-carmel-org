@@ -5,13 +5,18 @@ import { graphql, useStaticQuery } from 'gatsby';
 import { Seo } from '../../components/Seo';
 import { getImage, StaticImage } from 'gatsby-plugin-image';
 import { ContentBlock } from '../../components/ContentBlock';
-import { TextBlock } from '../../components/TextBlock';
+import { InverseTextBlock, TextBlock } from '../../components/TextBlock';
 import { Divider } from '../../components/Divider';
+import { InverseContentBlock } from '../../components/InverseContentBlock';
+import { ImageSpotlight } from '../../components/ImageSpotlight';
+import { ArrowRight } from 'react-bootstrap-icons';
+import { LinkButton } from '../../components/LinkButton';
 
 const IndexPage: React.FC = () => {
-  const { header } = useStaticQuery(query);
+  const { header, register } = useStaticQuery(query);
 
   const headerImage = getImage(header);
+  const registerImage = getImage(register);
 
   return (
     <Layout>
@@ -169,15 +174,29 @@ const IndexPage: React.FC = () => {
           </p>
         </TextBlock>
       </ContentBlock>
+
+      <InverseContentBlock>
+        <ImageSpotlight
+          image={registerImage}
+          title="We hope to see you soon!"
+          description="If you'd like to secure a spot for your child at one of our summer sessions, please complete the flexible registration process."
+          action={<LinkButton to="/registration" text="Register" RightIcon={ArrowRight} />}
+          orientation="left"
+        />
+      </InverseContentBlock>
     </Layout>
   );
 };
-
 const query = graphql`
   query {
     header: file(relativePath: { eq: "junior-camp-619.jpg" }) {
       childImageSharp {
         gatsbyImageData(width: 2000, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+      }
+    }
+    register: file(relativePath: { eq: "junior-camp-carmel-2017-99.jpg" }) {
+      childImageSharp {
+        gatsbyImageData(width: 1000, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
       }
     }
   }

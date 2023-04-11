@@ -94,6 +94,7 @@ const Container = styled.header`
   .brand {
     flex-shrink: 0;
     margin-top: -6px; // Shift the logo up to center the text
+    padding: 0 12px;
   }
 
   .nav-toggle {
