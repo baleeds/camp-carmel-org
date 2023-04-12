@@ -27,8 +27,10 @@ export const Footer: React.FC = () => {
           <div className="footer__section">
             <h4>Physical address</h4>
             <p>
-              1676 Linville Falls Hwy <br />
-              Newland, NC 28657
+              <a href="https://goo.gl/maps/4NyW3EDLj1GmdPhNA" target="_blank">
+                1676 Linville Falls Hwy <br />
+                Newland, NC 28657
+              </a>
             </p>
           </div>
           <div className="footer__section">

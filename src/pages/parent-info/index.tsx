@@ -9,7 +9,7 @@ import { Divider } from '../../components/Divider';
 import { Seo } from '../../components/Seo';
 import { CollapsibleSection } from '../../components/CollapsibleSection';
 import { ImageSpotlight } from '../../components/ImageSpotlight';
-import { ArrowRight } from 'react-bootstrap-icons';
+import { ArrowRight, Geo } from 'react-bootstrap-icons';
 import { LinkButton } from '../../components/LinkButton';
 
 const IndexPage: React.FC<PageProps> = ({ location }) => {
@@ -31,6 +31,32 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
           </p>
         </TextBlock>
         <TextBlock style={{ marginBottom: 24, marginTop: 0, paddingTop: 0 }}>
+          <Divider />
+          <CollapsibleSection header={<h2>How do I get to camp?</h2>}>
+            <p>
+              Camp Carmel is located at{' '}
+              <a href="https://goo.gl/maps/4NyW3EDLj1GmdPhNA" target="_blank">
+                1676 Linville Falls Hwy, Newland, NC 28657
+              </a>
+              .
+            </p>
+            <p>
+              Because the campus is nestled in the woods and off the main road, we share a driveway with Avery Heating
+              and Air. After turning in at Avery Heating and Air, follow the driveway past the yellow gate and up to the
+              top of the hill.
+            </p>
+            <p>Check-in will be at the red lodge at the end of the driveway.</p>
+            <p>
+              <LinkButton
+                isAnchor
+                blank
+                to="https://goo.gl/maps/4NyW3EDLj1GmdPhNA"
+                text="Open in Google Maps"
+                LeftIcon={Geo}
+                style="outline"
+              />
+            </p>
+          </CollapsibleSection>
           <Divider />
           <CollapsibleSection id="packing-list" header={<h2>What should I pack for camp?</h2>} location={location}>
             <p>
