@@ -21,5 +21,5 @@ const Container = styled.div`
   background-repeat: no-repeat;
   padding: 64px 0;
   width: 100%;
-  background-size: contain;
+  background-size: cover;
 `;
