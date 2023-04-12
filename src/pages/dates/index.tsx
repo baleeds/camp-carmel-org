@@ -202,6 +202,11 @@ const query = graphql`
   }
 `;
 
-export const Head = () => <Seo title="2023 Dates & Rates" />;
+export const Head = () => (
+  <Seo
+    title="2023 Dates & Rates"
+    description="Explore our 2023 summer camp sessions for boys and girls in elementary, middle, and high school. Experience true Christian community this summer."
+  />
+);
 
 export default IndexPage;

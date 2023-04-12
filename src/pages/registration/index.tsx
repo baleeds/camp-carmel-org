@@ -141,6 +141,11 @@ const query = graphql`
   }
 `;
 
-export const Head = () => <Seo title="Registration" />;
+export const Head = () => (
+  <Seo
+    title="Registration"
+    description="Register your child for our summer camp sessions. Download and submit our 2023 Registration Packet."
+  />
+);
 
 export default IndexPage;

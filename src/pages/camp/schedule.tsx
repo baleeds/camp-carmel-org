@@ -104,6 +104,11 @@ const query = graphql`
   }
 `;
 
-export const Head = () => <Seo title="Schedule" />;
+export const Head = () => (
+  <Seo
+    title="Schedule"
+    description="Get a glimpse of a typical day in the life of a camper at Camp Carmel with our fun-filled activities, delicious meals, cabin adventures, and meaningful bible-based learning."
+  />
+);
 
 export default IndexPage;

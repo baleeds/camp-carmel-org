@@ -191,6 +191,11 @@ const query = graphql`
   }
 `;
 
-export const Head = () => <Seo title="Life at Camp" />;
+export const Head = () => (
+  <Seo
+    title="Life at Camp"
+    description="Discover the exciting and fulfilling life at Camp Carmel with our engaging activities, bible curriculum, and servant leadership development. Experience summer camp in the Blue Ridge Mountains."
+  />
+);
 
 export default IndexPage;

@@ -190,6 +190,11 @@ const query = graphql`
   }
 `;
 
-export const Head = () => <Seo title="Parent Info" />;
+export const Head = () => (
+  <Seo
+    title="Parent Info"
+    description="Discover everything you need to know in our comprehensive parents' guide. See an expert's packing list, check-in protocol, medication tips, and more."
+  />
+);
 
 export default IndexPage;

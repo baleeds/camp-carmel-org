@@ -57,6 +57,11 @@ const query = graphql`
   }
 `;
 
-export const Head = () => <Seo title="Contact" />;
+export const Head = () => (
+  <Seo
+    title="Contact"
+    description="Contact our friendly team if you have any questions, concerns, or need information about camp dates and availability."
+  />
+);
 
 export default IndexPage;
