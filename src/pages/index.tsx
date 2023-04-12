@@ -71,25 +71,25 @@ const IndexPage = () => {
             image={whatToBringImage}
             title="What to bring to camp?"
             description="The right gear can make all the difference in creating a comfortable and enjoyable camp environment. Our packing list includes all the supplies you'll need to make memories that last a lifetime!"
-            action={<LinkButton to="/parent-info#packing-list" text="Read more" RightIcon={ArrowRight} />}
+            action={<LinkButton to="/parent-info#packing-list" text="Check the list" RightIcon={ArrowRight} />}
           />
           <Tile
             image={leadersImage}
             title="Trustworthy leadership"
             description="At our camp, we believe that good leadership starts with leading by example. Our counselors are trained in creating a safe, supportive, and fun environment for campers."
-            action={<LinkButton to="/camp#counselors" text="Read more" RightIcon={ArrowRight} />}
+            action={<LinkButton to="/camp#counselors" text="Learn about our training" RightIcon={ArrowRight} />}
           />
           <Tile
             image={dayInTheLifeImage}
             title="A day in the life of a camper"
             description="Each day is a unique opportunity to learn, grow, and create memories. Starting with morning watch and ending around a campfire, campers will engage in a variety of activities from hiking and swimming to arts and crafts and team-building games."
-            action={<LinkButton to="/camp/schedule" text="Read more" RightIcon={ArrowRight} />}
+            action={<LinkButton to="/camp/schedule" text="View a sample schedule" RightIcon={ArrowRight} />}
           />
           <Tile
             image={foodImage}
             title="Food and lodging"
             description="Food and lodging play a critical role in ensuring that campers have the energy and rest they need to make the most of their camp experience. That's why at our camp, we strive to provide balanced meals and comfortable accommodations."
-            action={<LinkButton to="/camp#nutrition" text="Read more" RightIcon={ArrowRight} />}
+            action={<LinkButton to="/camp#nutrition" text="Read about our nutrition" RightIcon={ArrowRight} />}
           />
         </GridLayout>
       </InverseContentBlock>
