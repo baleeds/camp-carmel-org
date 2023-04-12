@@ -126,7 +126,7 @@ const Container = styled.header`
           //text-transform: uppercase;
           font-size: 16px;
           white-space: nowrap;
-          font-weight: bold;
+          font-weight: 700;
           display: inline-block;
 
           &:hover {

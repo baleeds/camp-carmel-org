@@ -31,7 +31,7 @@ module.exports = {
         web: [
           {
             name: `Open Sans`,
-            file: `https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap`,
+            file: `https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap`,
           },
           {
             name: `Patua One`,

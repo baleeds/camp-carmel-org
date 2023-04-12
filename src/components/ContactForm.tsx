@@ -111,7 +111,7 @@ const Container = styled.form`
     label {
       display: block;
       margin-bottom: 2px;
-      font-weight: bold;
+      font-weight: 700;
       color: var(--color-primary);
       font-size: 1em;
     }
@@ -154,7 +154,7 @@ const Container = styled.form`
     align-self: flex-start;
     color: white;
     margin-bottom: 12px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: var(--font-stack);
 
     &:hover:not([disabled]) {
       background-color: var(--color-secondary-light);

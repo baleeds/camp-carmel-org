@@ -21,6 +21,9 @@ export const GlobalStyles = createGlobalStyle`
     --color-background-medium: #d6e3e7;
     --color-background-blank: white;
     --color-background-none: transparent;
+    
+    --font-stack: 'Open Sans', 'Segoe UI', Tahoma, sans-serif;
+    --font-stack-secondary: 'Patua One', 'Arial Black', serif;
   }
 
   * {
@@ -31,19 +34,19 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   html, body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: var(--font-stack);
     color: var(--color-text-default);
     margin: 0;
     padding: 0;
   }
   
   input, textarea, button {
-    font-family: 'Open Sans', sans-serif;
+    font-family: var(--font-stack);
     color: var(--color-text-default);
   }
 
   h1, h2, h3 {
-    font-family: 'Patua One', serif;
+    font-family: var(--font-stack-secondary);
     
     em {
       opacity: 0.6;
@@ -72,7 +75,7 @@ export const GlobalStyles = createGlobalStyle`
   h4 {
     font-size: 15px;
     line-height: 1.2em;
-    font-weight: bold;
+    font-weight: 700;
     margin-bottom: .2em;
   }
 
