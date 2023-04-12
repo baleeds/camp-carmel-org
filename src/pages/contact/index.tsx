@@ -27,9 +27,9 @@ const IndexPage: React.FC = () => {
             Leeds.
           </p>
           <InsetBlock>
-            <h4>Call or text:</h4>
+            <h4>Phone number:</h4>
             <p>
-              <a href="tel:8288173708">(828) 817-3708</a>
+              <a href="tel:8287332480">(828) 733-2480</a>
             </p>
 
             <h4>Email:</h4>
