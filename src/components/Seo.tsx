@@ -9,41 +9,27 @@ import * as React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
 interface Props {
-  title?: string;
+  title: string;
+  description: string;
+  includeSiteNameInTitle?: boolean;
   children?: React.ReactNode;
-  description?: string;
 }
 
-export function Seo({ description, title, children }: Props): JSX.Element {
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            author
-          }
-        }
-      }
-    `,
-  );
-
-  const metaDescription = description || site.siteMetadata.description;
-  const defaultTitle = site.siteMetadata?.title;
-
+export function Seo({ description, title, includeSiteNameInTitle = true, children }: Props): JSX.Element {
   return (
     <>
       <title>
-        {title ? `${title} | ${defaultTitle}` : `Camp Carmel – Christian Summer Camp for Boy & Girls – Linville, NC`}
+        {title}
+        {includeSiteNameInTitle ? ' | Camp Carmel' : ''}
       </title>
-      <meta name="description" content={metaDescription} />
+      <meta name="description" content={description} />
       <meta property="og:title" content={title} />
-      <meta property="og:description" content={metaDescription} />
+      <meta property="og:description" content={description} />
       <meta property="og:type" content="website" />
+      <meta property="og:site_name" content="Camp Carmel" />
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={metaDescription} />
+      <meta name="twitter:description" content={description} />
       {children}
     </>
   );

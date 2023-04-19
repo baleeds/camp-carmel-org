@@ -143,7 +143,11 @@ const query = graphql`
  * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
  */
 export const Head = () => (
-  <Seo description="Welcome to Camp Carmel, a Christian summer camp nestled in the mountains of North Carolina. Explore our 2023 summer sessions for boys and girls, ages 5 to 18." />
+  <Seo
+    title="Camp Carmel – Christian Summer Camp for Boy & Girls – Linville, NC"
+    description="Nestled in the mountains of North Carolina, Camp Carmel offers overnight Christian summer camps for boys and girls ages 5 to 18. Experience the joys of community living without the distractions and stresses of everyday life."
+    includeSiteNameInTitle={false}
+  />
 );
 
 export default IndexPage;
