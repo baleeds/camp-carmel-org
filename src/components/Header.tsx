@@ -82,6 +82,7 @@ const Container = styled.header`
   justify-content: center;
   z-index: 9999;
   border-bottom: 1px solid var(--color-border-light);
+  box-shadow: rgb(0 0 0 / 6%) 0 1px 6px 0;
 
   .inner-container {
     display: flex;
