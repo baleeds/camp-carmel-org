@@ -81,6 +81,7 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
             </ul>
             <h4>What not to bring?</h4>
             <ul>
+              <li>Snacks (restricting snacks in cabins protects us from critters)</li>
               <li>Electronics (cell phones, tablets, music players, etc.)</li>
               <li>Weapons (knives, guns, etc.)</li>
               <li>Alcohol or drugs (or any clothing that promotes it)</li>

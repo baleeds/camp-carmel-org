@@ -6,7 +6,7 @@ import { Icon } from 'react-bootstrap-icons';
 interface Props {
   to: string;
   text: string;
-  style?: 'none' | 'ghost' | 'inverse' | 'outline';
+  style?: 'none' | 'ghost' | 'inverse' | 'outline' | 'inverseOutline';
   size?: 'default' | 'large';
   RightIcon?: Icon;
   LeftIcon?: Icon;
@@ -85,6 +85,16 @@ const LinkButtonOutline = styled(LinkButtonGhost)`
   }
 `;
 
+const LinkButtonInverseOutline = styled(LinkButtonGhost)`
+  border: 1.5px solid var(--color-blank);
+  color: var(--color-blank);
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--color-blank);
+  }
+`;
+
 const LinkButtonInverse = styled(LinkButtonGhost)`
   background-color: rgba(255, 255, 255, 0.92);
   color: var(--color-primary);
@@ -99,4 +109,5 @@ const buttonMap = {
   ghost: LinkButtonGhost,
   outline: LinkButtonOutline,
   inverse: LinkButtonInverse,
+  inverseOutline: LinkButtonInverseOutline,
 } as const;

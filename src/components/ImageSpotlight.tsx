@@ -6,6 +6,7 @@ interface Props {
   id?: string;
   image: IGatsbyImageData | undefined;
   title: string;
+  subtitle?: string;
   description?: string;
   action?: React.ReactNode;
   orientation: 'left' | 'right';
@@ -17,6 +18,7 @@ export const ImageSpotlight: React.FC<Props> = ({
   id,
   image,
   title,
+  subtitle,
   description,
   action,
   orientation,
@@ -36,6 +38,11 @@ export const ImageSpotlight: React.FC<Props> = ({
       <div className="image-spotlight__body">
         <div className="image-spotlight__content">
           <h2>{title}</h2>
+          {subtitle && (
+            <h3 className="subtext">
+              <em>{subtitle}</em>
+            </h3>
+          )}
           {description && <p>{description}</p>}
           {children}
         </div>

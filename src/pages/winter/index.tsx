@@ -8,97 +8,192 @@ import { ContentBlock } from '../../components/ContentBlock';
 import { InverseTextBlock, TextBlock } from '../../components/TextBlock';
 import { Divider } from '../../components/Divider';
 import { LinkButton } from '../../components/LinkButton';
-import { Paperclip } from 'react-bootstrap-icons';
+import { ArrowRight, Geo, Paperclip } from 'react-bootstrap-icons';
 import { InverseContentBlock } from '../../components/InverseContentBlock';
 import { InsetBlock } from '../../components/InsetBlock';
+import { ImageSpotlight } from '../../components/ImageSpotlight';
+import { CollapsibleSection } from '../../components/CollapsibleSection';
 
 const IndexPage: React.FC = () => {
-  const { header } = useStaticQuery(query);
+  const { header, winterCamp, winterRetreat } = useStaticQuery(query);
 
   const headerImage = getImage(header);
+  const winterCampImage = getImage(winterCamp);
+  const winterRetreatImage = getImage(winterRetreat);
 
   return (
     <Layout>
       <PageHeader image={headerImage} />
 
-      <ContentBlock>
+      <ContentBlock background="light">
         <TextBlock>
-          <h1>Winter Camp</h1>
+          <h1>Winter Camps</h1>
           <p>
-            We're thrilled that you're considering joining us for an unforgettable summer experience. Our registration
-            process is flexible and easy, designed to make it convenient for you to secure a spot for your child.
+            Join us for a memorable retreat filled with snow-dusted adventures, heartwarming fellowship, and a deeper
+            connection with your faith.
           </p>
         </TextBlock>
       </ContentBlock>
-      <ContentBlock background={'light'}>
-        <TextBlock>
-          <h2>Step 1: Fill out the 2023 Registration Packet</h2>
+
+      <ContentBlock style={{ marginTop: 64 }}>
+        <ImageSpotlight
+          image={winterCampImage}
+          orientation="left"
+          title="Winter Camp"
+          subtitle="December 27th - 30th"
+          action={<LinkButton to="#registration" text="Register for winter camp" RightIcon={ArrowRight} />}
+        >
           <p>
-            To ensure that we have all the necessary information to give your child a wonderful week at camp, parents
-            are required to complete our 2023 Registration Packet which can be downloaded below.
+            Our Winter Camp offers a unique opportunity to enjoy the serene beauty of the season while strengthening
+            your relationship with God and forging lasting friendships.
+          </p>
+          <p>
+            <em>For campers ages 13 to 18.</em>
+          </p>
+        </ImageSpotlight>
+
+        <ImageSpotlight
+          image={winterRetreatImage}
+          orientation="right"
+          title="Winter Young Adult Retreat"
+          subtitle="January 5th - 7th, 2024"
+          action={<LinkButton to="#registration" text="Register for winter retreat" RightIcon={ArrowRight} />}
+        >
+          <p>
+            Winter's serene beauty provides the perfect backdrop for spiritual reflection and reconnection with God.
+          </p>
+          <p>
+            <em>For adults ages 18 to 30.</em>
+          </p>
+        </ImageSpotlight>
+      </ContentBlock>
+
+      <ContentBlock background="light">
+        <TextBlock style={{ marginBottom: 0, paddingBottom: 72 }}>
+          <h1>Preparing for Winter</h1>
+          <p>
+            We understand that sending your child to camp can be a big step, and we want to provide you with all the
+            information you need to help your child have a fun, safe, and memorable time at camp.
+          </p>
+          <Divider style={{ marginTop: 48 }} />
+          <CollapsibleSection header={<h2>What happens if it snows?</h2>}>
+            <p>
+              Our area of the Blue Ridge Mountains is known for unpredictable winter weather. In case of ice or snow
+              that makes it dangerous for campers or parents to travel to Linville, NC, Winter Camp may be canceled,
+              postponed, or moved to an alternate location.
+            </p>
+            <p>
+              All pre-registered campers’ parents will be notified promptly of any weather-related changes. Please use
+              extra caution when driving in the winter, regardless of weather conditions.
+            </p>
+          </CollapsibleSection>
+          <Divider />
+          <CollapsibleSection header={<h2>What should I pack for winter camp?</h2>}>
+            <p>
+              Packing for winter camp can be an exciting and sometimes overwhelming experience. In this section, we will
+              provide you with a comprehensive guide on how to pack.
+            </p>
+            <h4>What to bring?</h4>
+            <ul>
+              <li>Warm bedding for a twin-size bed (sheets, blanket or sleeping bag, pillow)</li>
+              <li>Toiletries (soap, shampoo, toothbrush, deodorant)</li>
+              <li>Towels for showers and swimming in the river</li>
+              <li>Shoes (snow-worthy boots for activities and hiking, shower shoes, casual shoes)</li>
+              <li>
+                Warm clothing, hats, gloves, and coats (campers will be spending time outdoors with temperatures between
+                10 and 50 degrees.)
+              </li>
+              <li>Appropriate, warm sleepwear</li>
+              <li>Medications (in original bottles with clear instructions)</li>
+              <li>Bible (or use community Bibles)</li>
+              <li>Flashlight or headlamp</li>
+              <li>Water bottle</li>
+              <li>Backpack or day bag</li>
+            </ul>
+            <h4>What not to bring?</h4>
+            <ul>
+              <li>Snacks (restricting snacks in cabins protects us from critters)</li>
+              <li>Electronics (cell phones, tablets, music players, etc.)</li>
+              <li>Weapons (knives, guns, etc.)</li>
+              <li>Alcohol or drugs (or any clothing that promotes it)</li>
+              <li>Clothing that does not reflect Christian values</li>
+            </ul>
+          </CollapsibleSection>
+          <Divider />
+          <CollapsibleSection header={<h2>Where will campers stay during winter camp?</h2>}>
+            <p>
+              All campers will sleep in the main lodge. Girls and female leaders will all stay upstairs, boys and male
+              leaders will all stay downstairs.
+            </p>
+          </CollapsibleSection>
+          <Divider />
+          <CollapsibleSection header={<h2>Are campers allowed to have cell phones at camp?</h2>}>
+            <p>
+              We believe in the importance of unplugging and being present in the moment. That's why we are proud of our
+              phone-free policy. If your camper wishes to have their phone for the trip to and from camp, we can store
+              cell phones securely from check-in to check-out.
+            </p>
+          </CollapsibleSection>
+          <Divider />
+          <CollapsibleSection header={<h2>What should I expect at drop-off & pick-up?</h2>}>
+            <p>
+              All campers must be checked in and out at the lodge on top of the hill. The lodge is easily accessible
+              from the main entrance of the camp.
+            </p>
+            <p>
+              Winter camp drop-off time is at 5 pm on the first day of camp. For safety reasons, we require that parents
+              or guardians accompany their children during the check-in process. During check-in, our staff will collect
+              any medications, dietary needs, or other important information about your child.
+            </p>
+            <p>
+              Pick-up time is at 10 am on the last day of your child's session. We ask that you arrive promptly to pick
+              up your child. If you need to make special arrangements for pick-up, please let us know in advance.
+            </p>
+          </CollapsibleSection>
+          <Divider />
+          <CollapsibleSection header={<h2>What if my camper has dietary restrictions?</h2>}>
+            <p>
+              We believe that healthy food is an important part of your child's experience at camp and we take pride in
+              providing nutritious and delicious meals. If your child has any allergies or dietary needs, please let us
+              know during the registration process so that we can make the necessary arrangements well in advance.
+            </p>
+          </CollapsibleSection>
+          <Divider />
+          <CollapsibleSection header={<h2>What if my camper has medications?</h2>}>
+            <p>
+              If your child has any medications that they need to take while at camp, we ask that you send them in their
+              originally prescribed container, clearly labeled with your child's name, dosage instructions, and the name
+              of the medication. This helps us ensure that your child is receiving the correct medication at the correct
+              time.
+            </p>
+          </CollapsibleSection>
+        </TextBlock>
+      </ContentBlock>
+
+      <InverseContentBlock id="registration">
+        <InverseTextBlock>
+          <h2>Register for Winter Camp and Winter Retreat</h2>
+          <p>
+            To ensure that we have all the necessary information to give you or your child a wonderful experience at
+            camp, complete our Winter Camp Registration Packet which can be downloaded below.
           </p>
           <p>
             <LinkButton
               isAnchor
               blank
-              to="/downloads/Camp Carmel - 2023 Registration Packet.pdf"
-              style="outline"
-              text="2023 Registration Packet"
+              to="/downloads/Winter Camp Registration Forms.pdf"
+              style="inverseOutline"
+              text="Winter Registration Packet"
               LeftIcon={Paperclip}
             />
           </p>
-
-          <Divider />
-
-          <h2>Step 2: Submit the Completed Packet</h2>
-          <p>
-            A completed registration packet may be mailed or emailed to us using the contact information in the next
-            section.
-          </p>
-
-          <Divider />
-
-          <h2>Step 3: Provide Payment (Now or Later)</h2>
-          <p>
-            Summer session costs can be found on our <Link to="/dates">Dates & Rates</Link> page.
-          </p>
-
-          <p>
-            If you would like to make payment ahead of time, you can send a check to Camp Carmel at the mailing address
-            provided below. If the payment is separate from the registration packet, kindly include the camper's full
-            name and the summer session in the memo line.
-          </p>
-
-          <p>
-            Please note that payment is not required at the time of submitting the registration packet. Alternatively,
-            you can make payment during check-in using cash or check, with checks being the preferred method. We strive
-            to make the payment process as convenient as possible for our families.
-          </p>
-
-          <p>
-            Thank you for your cooperation, and we look forward to welcoming your child to an enriching experience at
-            our camp!
-          </p>
-
-          <InsetBlock style={{ marginTop: 48 }}>
-            <h4>Email Address</h4>
-            <p>
-              <a href="mailto:campcarmel1952@gmail.com">campcarmel1952@gmail.com</a>
-            </p>
-            <h4>Mailing Address</h4>
-            <p>
-              Camp Carmel <br />
-              P.O. Box 884 <br />
-              Linville, NC 28646
-            </p>
-          </InsetBlock>
-        </TextBlock>
-      </ContentBlock>
+        </InverseTextBlock>
+      </InverseContentBlock>
 
       <ContentBlock>
         <TextBlock>
           <StaticImage
-            src="../../images/junior-camp-carmel-2017-87.jpg"
+            src="../../images/winter-retreat-39.jpg"
             alt="Camp is for everyone"
             imgStyle={{ borderRadius: 8 }}
           />
@@ -115,7 +210,7 @@ const IndexPage: React.FC = () => {
         </TextBlock>
       </ContentBlock>
 
-      <InverseContentBlock>
+      <InverseContentBlock background="none">
         <InverseTextBlock>
           <h2>We're Here to Help</h2>
           <p>
@@ -138,13 +233,23 @@ const query = graphql`
         gatsbyImageData(width: 2000, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
       }
     }
+    winterCamp: file(relativePath: { eq: "winter-retreat-33.jpg" }) {
+      childImageSharp {
+        gatsbyImageData(width: 1000, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+      }
+    }
+    winterRetreat: file(relativePath: { eq: "winter-retreat-16-6.jpg" }) {
+      childImageSharp {
+        gatsbyImageData(width: 1000, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+      }
+    }
   }
 `;
 
 export const Head = () => (
   <Seo
-    title="Registration"
-    description="Register your child for our summer camp sessions. Download and submit our 2023 Registration Packet."
+    title="Winter Camps"
+    description="Snow-dusted adventures, heart-warming friendships, and Christ-centered growth"
   />
 );
 

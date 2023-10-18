@@ -14,7 +14,7 @@ interface NavbarItem {
 
 const navbarItems: NavbarItem[] = [
   {
-    displayName: 'Winter Camp',
+    displayName: 'Winter Camps',
     to: '/winter',
   },
   {

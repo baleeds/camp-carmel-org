@@ -3,15 +3,22 @@ import { ContentBlock } from './ContentBlock';
 import React from 'react';
 
 interface Props {
+  id?: string;
+  background?: 'mountains' | 'none';
   children: React.ReactNode;
 }
 
-export const InverseContentBlock: React.FC<Props> = ({ children }) => {
+export const InverseContentBlock: React.FC<Props> = ({ id, background = 'mountains', children }) => {
   return (
-    <Container>
+    <Container id={id} style={{ backgroundImage: backgroundImageMap[background] }}>
       <ContentBlock background={'none'}>{children}</ContentBlock>
     </Container>
   );
+};
+
+const backgroundImageMap = {
+  mountains: "url('/images/mountains-bg.svg')",
+  none: 'unset',
 };
 
 const Container = styled.div`
