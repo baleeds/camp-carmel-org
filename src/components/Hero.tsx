@@ -1,7 +1,7 @@
 ﻿import React from 'react';
 import BackgroundImg from 'gatsby-background-image';
 import { graphql, useStaticQuery, Link } from 'gatsby';
-import { getImage } from 'gatsby-plugin-image';
+import { getImage, IGatsbyImageData } from "gatsby-plugin-image";
 import { convertToBgImage } from 'gbimage-bridge';
 import styled from 'styled-components';
 
@@ -9,11 +9,13 @@ interface Props {
   children: React.ReactNode;
   title: string;
   subTitle?: string;
+  image: IGatsbyImageData | undefined;
 }
 
-export const Hero: React.FC<Props> = ({ title, subTitle, children }): JSX.Element => {
-  const { file } = useStaticQuery(query);
-  const image = getImage(file);
+export const Hero: React.FC<Props> = ({ title, subTitle, image: imageFile, children }) => {
+  if (!imageFile) return null;
+
+  const image = getImage(imageFile);
   const bgImage = convertToBgImage(image);
 
   return (

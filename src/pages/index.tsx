@@ -15,8 +15,9 @@ import { Tile } from '../components/Tile';
 import { GridLayout } from '../components/GridLayout';
 
 const IndexPage = () => {
-  const { family, holySpirit, roots, whatToBring, leaders, dayInTheLife, food } = useStaticQuery(query);
+  const { hero, family, holySpirit, roots, whatToBring, leaders, dayInTheLife, food } = useStaticQuery(query);
 
+  const heroImage = getImage(hero);
   const familyImage = getImage(family);
   const holySpiritImage = getImage(holySpirit);
   const rootsImage = getImage(roots);
@@ -30,6 +31,7 @@ const IndexPage = () => {
       <Hero
         title="Camp Carmel is an overnight summer camp tucked away in Western North Carolina that has been offering Christ-centered camps since 1952."
         subTitle="Welcome to Camp Carmel"
+        image={heroImage}
       >
         <LinkButton to="dates" text="View our dates and rates" style="inverse" RightIcon={ArrowRight} />
       </Hero>
@@ -99,6 +101,11 @@ const IndexPage = () => {
 
 const query = graphql`
   query {
+    hero: file(relativePath: { eq: "junior-camp-638.jpg" }) {
+      childImageSharp {
+        gatsbyImageData(width: 2000, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+      }
+    }
     family: file(relativePath: { eq: "camp-carmel-2019-27.jpg" }) {
       childImageSharp {
         gatsbyImageData(width: 1000, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
