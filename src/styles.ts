@@ -45,11 +45,15 @@ export const GlobalStyles = createGlobalStyle`
     color: var(--color-text-default);
   }
 
-  h1, h2, h3 {
+  h1, h2, h3, h4 {
     font-family: var(--font-stack-secondary);
     
     em {
       opacity: 0.6;
+    }
+    
+    &.subtext {
+      margin-top: -18px;
     }
   }
 

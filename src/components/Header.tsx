@@ -14,7 +14,11 @@ interface NavbarItem {
 
 const navbarItems: NavbarItem[] = [
   {
-    displayName: 'Dates & Rates',
+    displayName: 'Winter Camp',
+    to: '/winter',
+  },
+  {
+    displayName: 'Summer Camps',
     to: '/dates',
   },
   {
@@ -142,7 +146,7 @@ const Container = styled.header`
     }
   }
 
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1100px) {
     nav {
       display: none;
     }

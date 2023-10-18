@@ -24,7 +24,7 @@ const IndexPage: React.FC = () => {
 
       <ContentBlock>
         <TextBlock>
-          <h1>2023 Summer Sessions</h1>
+          <h1>2024 Summer Sessions</h1>
           <p>
             We are excited to offer a range of camp sessions, designed to provide a unique and engaging experience, with
             activities and programming tailored to the interests and needs of different age groups.
@@ -44,9 +44,10 @@ const IndexPage: React.FC = () => {
           <Divider />
 
           <h3>
-            Kiddie Camp <em>(Rising Kindergarten - 2nd grade)</em>
+            Kiddie Camp
           </h3>
-          <h4>July 2nd - 6th | $150</h4>
+          <h4 className="subtext"><em>Kindergarten - 2nd grade (approx. ages 5-7)</em></h4>
+          <h4>July 14th - 18th | $150</h4>
           <p>
             Kiddie Camp is a part-week camp, providing a way for young children to dip their toes into the camp
             lifestyle. We focus on age-appropriate activities and hands-on learning to help these campers thrive.
@@ -55,9 +56,10 @@ const IndexPage: React.FC = () => {
           <Divider />
 
           <h3>
-            Junior Camp <em>(Rising 3rd - 5th grade)</em>
+            Junior Camp
           </h3>
-          <h4>July 9th - 15th | $180</h4>
+          <h4 className="subtext"><em>3rd - 5th grade (approx. ages 8-10)</em></h4>
+          <h4>July 7th - 13th | $180</h4>
           <p>
             Junior Camp is designed to provide a safe and supportive environment where children can grow and explore
             their faith in a fun and engaging way.
@@ -66,9 +68,10 @@ const IndexPage: React.FC = () => {
           <Divider />
 
           <h3>
-            Junior High Camp <em>(Rising 6th - 8th grade)</em>
+            Junior High Camp
           </h3>
-          <h4>June 25th - July 1st | $180</h4>
+          <h4 className="subtext"><em>6th - 8th grade (approx. ages 11-13)</em></h4>
+          <h4>June 23rd - June 29th | $180</h4>
           <p>
             Junior High Camp is focused on helping campers discover who they are in Christ and how they can be a
             positive force among their peers and in their communities.
@@ -77,9 +80,10 @@ const IndexPage: React.FC = () => {
           <Divider />
 
           <h3>
-            Youth Camp <em>(Rising 9th - current 12th grade)</em>
+            Youth Camp
           </h3>
-          <h4>June 18th - 24th | $180</h4>
+          <h4 className="subtext"><em>9th - 12th grade (approx. ages 14-18)</em></h4>
+          <h4>June 16th - 22th | $180</h4>
           <p>
             While at Youth Camp, campers will participate in a variety of activities that are designed to help them
             develop key character traits, such as compassion, resilience, and self-discipline.
@@ -96,9 +100,10 @@ const IndexPage: React.FC = () => {
           <Divider />
 
           <h3>
-            High Adventure Camp <em>(12 - 18 years old)</em>
+            High Adventure Camp
           </h3>
-          <h4>July 24th - 28th | $230</h4>
+          <h4 className="subtext"><em>Ages 12-18</em></h4>
+          <h4>July 29th - August 2nd | $230</h4>
           <p>
             High Adventure Camp is a collaborative overnight camp with other Church of the Brethren affiliated camps
             throughout the Eastern United States. High Adventure camp is an outdoor adventure based camp where we spend
@@ -108,9 +113,10 @@ const IndexPage: React.FC = () => {
           <Divider />
 
           <h3>
-            Work Camp <em>(12 - 18 years old)</em>
+            Work Camp
           </h3>
-          <h4>July 16th - 20th | $130</h4>
+          <h4 className="subtext"><em>Ages 12-18</em></h4>
+          <h4>July 21st - 25th | $130</h4>
           <p>
             This is a unique opportunity for campers to make a difference in the community while developing important
             leadership skills by engaging in hands-on service projects. Campers at this session cap the week off with a
@@ -121,9 +127,10 @@ const IndexPage: React.FC = () => {
           <Divider />
 
           <h3>
-            Young at Heart Camp <em>(18 years old and older)</em>
+            Young at Heart Camp
           </h3>
-          <h4>July 28th - 30th | By donation</h4>
+          <h4 className="subtext"><em>Adults 18 years and older</em></h4>
+          <h4>July 19th - 21th | By donation</h4>
           <p>
             Rejuvenate and recharge at Young at Heart Camp, where adults have the opportunity to build deep connections
             to God and each other through devotion, prayer, outdoor activities, and unique games. Enjoy our natural
@@ -133,9 +140,10 @@ const IndexPage: React.FC = () => {
           <Divider />
 
           <h3>
-            Family Camp <em>(All ages)</em>
+            Family Camp
           </h3>
-          <h4>September 1st - 4th | By donation</h4>
+          <h4 className="subtext"><em>All ages</em></h4>
+          <h4>August 30th - September 2nd | By donation</h4>
           <p>
             With a focus on family devotion and community, our family camp session provides a meaningful and enriching
             experience for families of all shapes and sizes. Minors must be accompanied by an adult.{' '}
@@ -204,8 +212,8 @@ const query = graphql`
 
 export const Head = () => (
   <Seo
-    title="2023 Dates & Rates"
-    description="Explore our 2023 summer camp sessions for boys and girls in elementary, middle, and high school. Experience true Christian community this summer."
+    title="2024 Dates & Rates"
+    description="Explore our 2024 summer camp sessions for boys and girls in elementary, middle, and high school. Experience true Christian community this summer."
   />
 );
 
