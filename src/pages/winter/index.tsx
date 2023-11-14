@@ -48,7 +48,7 @@ const IndexPage: React.FC = () => {
             your relationship with God and forging lasting friendships.
           </p>
           <p>
-            <em>For campers ages 13 to 18.</em>
+            <em>For campers ages 13 to 18. Cost is $100.</em>
           </p>
         </ImageSpotlight>
 
@@ -63,7 +63,7 @@ const IndexPage: React.FC = () => {
             Winter's serene beauty provides the perfect backdrop for spiritual reflection and reconnection with God.
           </p>
           <p>
-            <em>For adults ages 18 to 30.</em>
+            <em>For adults ages 18 to 30. Recommended donation is $50.</em>
           </p>
         </ImageSpotlight>
       </ContentBlock>
