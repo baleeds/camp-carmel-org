@@ -13,10 +13,10 @@ interface NavbarItem {
 }
 
 const navbarItems: NavbarItem[] = [
-  {
-    displayName: 'Winter Camps',
-    to: '/winter',
-  },
+  // {
+  //   displayName: 'Winter Camps',
+  //   to: '/winter',
+  // },
   {
     displayName: 'Summer Camps',
     to: '/dates',

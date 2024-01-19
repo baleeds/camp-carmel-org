@@ -130,11 +130,11 @@ const IndexPage: React.FC = () => {
           <h4 className="subtext">
             <em>Adults 18 years and older</em>
           </h4>
-          <h4>July 19th - 21th | By donation</h4>
+          <h4>August 9th - 11th | By donation</h4>
           <p>
             Rejuvenate and recharge at Young at Heart Camp, where adults have the opportunity to build deep connections
             to God and each other through devotion, prayer, outdoor activities, and unique games. Enjoy our natural
-            setting and embrace a break from the stresses of daily life.{' '}
+            setting and embrace a break from the stresses of daily life.
           </p>
 
           <Divider />
