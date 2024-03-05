@@ -102,7 +102,7 @@ const IndexPage = () => {
 
 const query = graphql`
   query {
-    hero: file(relativePath: { eq: "junior-camp-638.jpg" }) {
+    hero: file(relativePath: { eq: "camp-carmel-bell.jpg" }) {
       childImageSharp {
         gatsbyImageData(width: 2000, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
       }
