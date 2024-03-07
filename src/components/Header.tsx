@@ -18,7 +18,7 @@ const navbarItems: NavbarItem[] = [
   //   to: '/winter',
   // },
   {
-    displayName: 'Summer Camps',
+    displayName: 'Dates & Rates',
     to: '/dates',
   },
   {
