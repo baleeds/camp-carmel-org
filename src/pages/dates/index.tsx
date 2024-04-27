@@ -202,7 +202,7 @@ const query = graphql`
         gatsbyImageData(width: 2000, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
       }
     }
-    register: file(relativePath: { eq: "junior-camp-carmel-2017-99.jpg" }) {
+    register: file(relativePath: { eq: "camp-carmel-2021-01.jpg" }) {
       childImageSharp {
         gatsbyImageData(width: 1000, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
       }
