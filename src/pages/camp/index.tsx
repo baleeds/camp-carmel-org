@@ -91,7 +91,7 @@ const IndexPage: React.FC = () => {
           image={curriculumImage}
           title="Bible Curriculum"
           orientation="right"
-          action={<LinkButton to="/history" text="See our beliefs" RightIcon={ArrowRight} />}
+          action={<LinkButton to="/history#theological-beliefs" text="See our beliefs" RightIcon={ArrowRight} />}
         >
           <p>
             Spiritual growth is just as important as physical and mental growth. We have an ecumenical Bible curriculum
