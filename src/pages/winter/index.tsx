@@ -15,55 +15,40 @@ import { ImageSpotlight } from '../../components/ImageSpotlight';
 import { CollapsibleSection } from '../../components/CollapsibleSection';
 
 const IndexPage: React.FC = () => {
-  const { header, winterCamp, winterRetreat } = useStaticQuery(query);
+  const { header, winterCamp } = useStaticQuery(query);
 
   const headerImage = getImage(header);
   const winterCampImage = getImage(winterCamp);
-  const winterRetreatImage = getImage(winterRetreat);
 
   return (
     <Layout>
       <PageHeader image={headerImage} />
 
-      <ContentBlock background="light">
-        <TextBlock>
-          <h1>Winter Camps</h1>
-          <p>
-            Join us for a memorable retreat filled with snow-dusted adventures, heartwarming fellowship, and a deeper
-            connection with your faith.
-          </p>
-        </TextBlock>
-      </ContentBlock>
+      {/*<ContentBlock background="light">*/}
+      {/*  <TextBlock>*/}
+      {/*    <h1>Winter Camps</h1>*/}
+      {/*    <p>*/}
+      {/*      Join us for a memorable retreat filled with snow-dusted adventures, heartwarming fellowship, and a deeper*/}
+      {/*      connection with your faith.*/}
+      {/*    </p>*/}
+      {/*  </TextBlock>*/}
+      {/*</ContentBlock>*/}
 
       <ContentBlock style={{ marginTop: 64 }}>
         <ImageSpotlight
           image={winterCampImage}
           orientation="left"
-          title="Winter Camp"
-          subtitle="December 27th - 30th"
+          title="Soul Food"
+          subtitle="The recipe for a strong faith"
           action={<LinkButton to="#registration" text="Register for winter camp" RightIcon={ArrowRight} />}
         >
+          <p>January 1st - 4th, 2025</p>
           <p>
             Our Winter Camp offers a unique opportunity to enjoy the serene beauty of the season while strengthening
             your relationship with God and forging lasting friendships.
           </p>
           <p>
             <em>For campers ages 13 to 18. Cost is $100.</em>
-          </p>
-        </ImageSpotlight>
-
-        <ImageSpotlight
-          image={winterRetreatImage}
-          orientation="right"
-          title="Winter Young Adult Retreat"
-          subtitle="January 5th - 7th, 2024"
-          action={<LinkButton to="#registration" text="Register for winter retreat" RightIcon={ArrowRight} />}
-        >
-          <p>
-            Winter's serene beauty provides the perfect backdrop for spiritual reflection and reconnection with God.
-          </p>
-          <p>
-            <em>For adults ages 18 to 30. Recommended donation is $50.</em>
           </p>
         </ImageSpotlight>
       </ContentBlock>
@@ -172,7 +157,8 @@ const IndexPage: React.FC = () => {
 
       <InverseContentBlock id="registration">
         <InverseTextBlock>
-          <h2>Register for Winter Camp and Winter Retreat</h2>
+          <h2>Register for Winter Camp</h2>
+          {/*<h2>Register for Winter Camp and Winter Retreat</h2>*/}
           <p>
             To ensure that we have all the necessary information to give you or your child a wonderful experience at
             camp, complete our Winter Camp Registration Packet which can be downloaded below.
@@ -228,17 +214,12 @@ const IndexPage: React.FC = () => {
 
 const query = graphql`
   query {
-    header: file(relativePath: { eq: "winter-retreat-16-7.jpg" }) {
+    header: file(relativePath: { eq: "2023-winter-camp-134.jpg" }) {
       childImageSharp {
         gatsbyImageData(width: 2000, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
       }
     }
-    winterCamp: file(relativePath: { eq: "winter-retreat-33.jpg" }) {
-      childImageSharp {
-        gatsbyImageData(width: 1000, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
-      }
-    }
-    winterRetreat: file(relativePath: { eq: "winter-retreat-16-6.jpg" }) {
+    winterCamp: file(relativePath: { eq: "2023-winter-camp-128.jpg" }) {
       childImageSharp {
         gatsbyImageData(width: 1000, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
       }

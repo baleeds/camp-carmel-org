@@ -33,8 +33,8 @@ const IndexPage = () => {
         subTitle="Welcome to Camp Carmel"
         image={heroImage}
       >
-        {/*<LinkButton to="winter" text="Explore Winter Camp" style="inverse" RightIcon={ArrowRight} />*/}
-        <LinkButton to="dates" text="View our dates and rates" style="inverse" RightIcon={ArrowRight} />
+        <LinkButton to="winter" text="Explore Winter Camp" style="inverse" RightIcon={ArrowRight} />
+        {/*<LinkButton to="dates" text="View our dates and rates" style="inverse" RightIcon={ArrowRight} />*/}
       </Hero>
 
       <ContentBlock>
@@ -102,7 +102,7 @@ const IndexPage = () => {
 
 const query = graphql`
   query {
-    hero: file(relativePath: { eq: "camp-carmel-bell.jpg" }) {
+    hero: file(relativePath: { eq: "winter-retreat-16-7.jpg" }) {
       childImageSharp {
         gatsbyImageData(width: 2000, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
       }

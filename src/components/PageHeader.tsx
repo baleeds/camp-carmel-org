@@ -32,6 +32,7 @@ const Background: any = styled(BackgroundImg)`
   justify-content: center;
 
   @media screen and (min-width: 700px) {
+    margin-top: 40px;
     height: 500px;
   }
 `;
