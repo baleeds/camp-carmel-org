@@ -173,12 +173,12 @@ const query = graphql`
         gatsbyImageData(width: 1000, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
       }
     }
-    cabin: file(relativePath: { eq: "junior-camp-611.jpg" }) {
+    cabin: file(relativePath: { eq: "camp-carmel-2024-364.jpg" }) {
       childImageSharp {
         gatsbyImageData(width: 1000, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
       }
     }
-    activities: file(relativePath: { eq: "junior-camp-636.jpg" }) {
+    activities: file(relativePath: { eq: "junior-camp-611.jpg" }) {
       childImageSharp {
         gatsbyImageData(width: 1000, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
       }

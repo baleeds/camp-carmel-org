@@ -5,7 +5,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import { Seo } from '../../components/Seo';
 import { getImage, StaticImage } from 'gatsby-plugin-image';
 import { ContentBlock } from '../../components/ContentBlock';
-import { InverseTextBlock, TextBlock } from '../../components/TextBlock';
+import { TextBlock } from '../../components/TextBlock';
 import { Divider } from '../../components/Divider';
 import { InverseContentBlock } from '../../components/InverseContentBlock';
 import { ImageSpotlight } from '../../components/ImageSpotlight';
@@ -24,7 +24,7 @@ const IndexPage: React.FC = () => {
 
       <ContentBlock>
         <TextBlock>
-          <h1>2024 Summer Sessions</h1>
+          <h1>2025 Summer Sessions</h1>
           <p>
             We are excited to offer a range of camp sessions, designed to provide a unique and engaging experience, with
             activities and programming tailored to the interests and needs of different age groups.
@@ -47,7 +47,7 @@ const IndexPage: React.FC = () => {
           <h4 className="subtext">
             <em>Kindergarten - 2nd grade (approx. ages 5-7)</em>
           </h4>
-          <h4>July 14th - 18th | $150</h4>
+          <h4>July 6th - 10th | $150</h4>
           <p>
             Kiddie Camp is a part-week camp, providing a way for young children to dip their toes into the camp
             lifestyle. We focus on age-appropriate activities and hands-on learning to help these campers thrive.
@@ -59,7 +59,7 @@ const IndexPage: React.FC = () => {
           <h4 className="subtext">
             <em>3rd - 5th grade (approx. ages 8-10)</em>
           </h4>
-          <h4>July 7th - 13th | $180</h4>
+          <h4>June 22nd - 28th | $180</h4>
           <p>
             Junior Camp is designed to provide a safe and supportive environment where children can grow and explore
             their faith in a fun and engaging way.
@@ -71,7 +71,7 @@ const IndexPage: React.FC = () => {
           <h4 className="subtext">
             <em>6th - 8th grade (approx. ages 11-13)</em>
           </h4>
-          <h4>June 23rd - June 29th | $180</h4>
+          <h4>June 15th - 21st | $180</h4>
           <p>
             Junior High Camp is focused on helping campers discover who they are in Christ and how they can be a
             positive force among their peers and in their communities.
@@ -83,7 +83,7 @@ const IndexPage: React.FC = () => {
           <h4 className="subtext">
             <em>9th - 12th grade (approx. ages 14-18)</em>
           </h4>
-          <h4>June 16th - 22th | $180</h4>
+          <h4>June 8th - 14th | $180</h4>
           <p>
             While at Youth Camp, campers will participate in a variety of activities that are designed to help them
             develop key character traits, such as compassion, resilience, and self-discipline.
@@ -103,7 +103,7 @@ const IndexPage: React.FC = () => {
           <h4 className="subtext">
             <em>Ages 12-18</em>
           </h4>
-          <h4>July 29th - August 2nd | $230</h4>
+          <h4>July 21st - 25th | $230</h4>
           <p>
             High Adventure Camp is a collaborative overnight camp with other Church of the Brethren affiliated camps
             throughout the Eastern United States. High Adventure camp is an outdoor adventure based camp where we spend
@@ -116,7 +116,7 @@ const IndexPage: React.FC = () => {
           <h4 className="subtext">
             <em>Ages 12-18</em>
           </h4>
-          <h4>July 21st - 25th | $130</h4>
+          <h4>July 13th - 17th | $130</h4>
           <p>
             This is a unique opportunity for campers to make a difference in the community while developing important
             leadership skills by engaging in hands-on service projects. Campers at this session cap the week off with a
@@ -130,7 +130,7 @@ const IndexPage: React.FC = () => {
           <h4 className="subtext">
             <em>Adults 18 years and older</em>
           </h4>
-          <h4>August 9th - 11th | By donation</h4>
+          <h4>July 25th - 27th | By donation</h4>
           <p>
             Rejuvenate and recharge at Young at Heart Camp, where adults have the opportunity to build deep connections
             to God and each other through devotion, prayer, outdoor activities, and unique games. Enjoy our natural
@@ -143,7 +143,7 @@ const IndexPage: React.FC = () => {
           <h4 className="subtext">
             <em>All ages</em>
           </h4>
-          <h4>August 30th - September 2nd | By donation</h4>
+          <h4>August 29th - September 1st | By donation</h4>
           <p>
             With a focus on family devotion and community, our family camp session provides a meaningful and enriching
             experience for families of all shapes and sizes. Minors must be accompanied by an adult.{' '}
@@ -197,7 +197,7 @@ const IndexPage: React.FC = () => {
 };
 const query = graphql`
   query {
-    header: file(relativePath: { eq: "junior-camp-619.jpg" }) {
+    header: file(relativePath: { eq: "camp-carmel-2024-368.jpg" }) {
       childImageSharp {
         gatsbyImageData(width: 2000, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
       }
