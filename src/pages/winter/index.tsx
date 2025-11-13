@@ -38,11 +38,11 @@ const IndexPage: React.FC = () => {
         <ImageSpotlight
           image={winterCampImage}
           orientation="left"
-          title="Soul Food"
-          subtitle="The recipe for a strong faith"
+          title="Yet!"
+          subtitle="Trusting God in the Unknown"
           action={<LinkButton to="#registration" text="Register for winter camp" RightIcon={ArrowRight} />}
         >
-          <p>January 1st - 4th, 2025</p>
+          <p>December 31st - January 3rd, 2026</p>
           <p>
             Our Winter Camp offers a unique opportunity to enjoy the serene beauty of the season while strengthening
             your relationship with God and forging lasting friendships.
@@ -126,7 +126,7 @@ const IndexPage: React.FC = () => {
               from the main entrance of the camp.
             </p>
             <p>
-              Winter camp drop-off time is at 5 pm on the first day of camp. For safety reasons, we require that parents
+              Winter camp drop-off time is at 5:30 pm on the first day of camp. For safety reasons, we require that parents
               or guardians accompany their children during the check-in process. During check-in, our staff will collect
               any medications, dietary needs, or other important information about your child.
             </p>
@@ -167,7 +167,7 @@ const IndexPage: React.FC = () => {
             <LinkButton
               isAnchor
               blank
-              to="/downloads/Winter Camp Registration Forms.pdf"
+              to="/downloads/Winter Camp Registration Forms 2025-2026.pdf"
               style="inverseOutline"
               text="Winter Registration Packet"
               LeftIcon={Paperclip}
