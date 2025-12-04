@@ -107,8 +107,9 @@ const IndexPage: React.FC = () => {
           <Divider />
           <CollapsibleSection header={<h2>Where will campers stay during winter camp?</h2>}>
             <p>
-              All campers will sleep in the main lodge. Girls and female leaders will all stay upstairs, boys and male
-              leaders will all stay downstairs.
+              Campers and leaders will stay in heated cabins. Our cabins are located in two different areas: an area for
+              boys and an area for girls. Each area has a well-maintained, climate controlled bathhouse for showering
+              and other hygiene needs.
             </p>
           </CollapsibleSection>
           <Divider />
@@ -126,9 +127,9 @@ const IndexPage: React.FC = () => {
               from the main entrance of the camp.
             </p>
             <p>
-              Winter camp drop-off time is at 5:30 pm on the first day of camp. For safety reasons, we require that parents
-              or guardians accompany their children during the check-in process. During check-in, our staff will collect
-              any medications, dietary needs, or other important information about your child.
+              Winter camp drop-off time is at 5:30 pm on the first day of camp. For safety reasons, we require that
+              parents or guardians accompany their children during the check-in process. During check-in, our staff will
+              collect any medications, dietary needs, or other important information about your child.
             </p>
             <p>
               Pick-up time is at 10 am on the last day of your child's session. We ask that you arrive promptly to pick
