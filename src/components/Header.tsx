@@ -13,18 +13,18 @@ interface NavbarItem {
 }
 
 const navbarItems: NavbarItem[] = [
+  // {
+  //   displayName: 'Winter Camps',
+  //   to: '/winter',
+  // },
   {
-    displayName: 'Winter Camps',
-    to: '/winter',
+    displayName: '2026 Dates & Rates',
+    to: '/dates',
   },
-  // {
-  //   displayName: 'Dates & Rates',
-  //   to: '/dates',
-  // },
-  // {
-  //   displayName: 'Registration',
-  //   to: '/registration',
-  // },
+  {
+    displayName: 'Registration',
+    to: '/registration',
+  },
   {
     displayName: 'Parent Info',
     to: '/parent-info',

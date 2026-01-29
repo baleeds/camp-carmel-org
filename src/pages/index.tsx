@@ -33,8 +33,8 @@ const IndexPage = () => {
         subTitle="Welcome to Camp Carmel"
         image={heroImage}
       >
-        <LinkButton to="winter" text="Explore Winter Camp" style="inverse" RightIcon={ArrowRight} />
-        {/*<LinkButton to="dates" text="View our dates and rates" style="inverse" RightIcon={ArrowRight} />*/}
+        {/*<LinkButton to="winter" text="Explore Winter Camp" style="inverse" RightIcon={ArrowRight} />*/}
+        <LinkButton to="dates" text="View our 2026 dates and rates" style="inverse" RightIcon={ArrowRight} />
       </Hero>
 
       <ContentBlock>
