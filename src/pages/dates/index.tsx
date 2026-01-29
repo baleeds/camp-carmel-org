@@ -212,8 +212,8 @@ const query = graphql`
 
 export const Head = () => (
   <Seo
-    title="2025 Dates & Rates"
-    description="Explore our 2025 summer camp sessions for boys and girls in elementary, middle, and high school. Experience true Christian community this summer."
+    title="2026 Dates & Rates"
+    description="Explore our 2026 summer camp sessions for boys and girls in elementary, middle, and high school. Experience true Christian community this summer."
   />
 );
 
