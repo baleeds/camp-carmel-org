@@ -32,18 +32,18 @@ const IndexPage: React.FC = () => {
       </ContentBlock>
       <ContentBlock background={'light'}>
         <TextBlock>
-          <h2>Step 1: Fill out the 2025 Registration Packet</h2>
+          <h2>Step 1: Fill out the 2026 Registration Packet</h2>
           <p>
             To ensure that we have all the necessary information to give your child a wonderful week at camp, parents
-            are required to complete our 2025 Registration Packet which can be downloaded below.
+            are required to complete our 2026 Registration Packet which can be downloaded below.
           </p>
           <p>
             <LinkButton
               isAnchor
               blank
-              to="/downloads/Camp Carmel - 2025 Registration Packet.pdf"
+              to="/downloads/Camp Carmel - 2026 Registration Packet.pdf"
               style="outline"
-              text="2025 Registration Packet"
+              text="2026 Registration Packet"
               LeftIcon={Paperclip}
             />
           </p>
@@ -144,7 +144,7 @@ const query = graphql`
 export const Head = () => (
   <Seo
     title="Registration"
-    description="Register your child for our summer camp sessions. Download and submit our 2025 Registration Packet."
+    description="Register your child for our summer camp sessions. Download and submit our 2026 Registration Packet."
   />
 );
 
