@@ -22,6 +22,10 @@ const navbarItems: NavbarItem[] = [
     to: '/dates',
   },
   {
+    displayName: 'Registration',
+    to: '/registration',
+  },
+  {
     displayName: 'Parent Info',
     to: '/parent-info',
   },
@@ -88,7 +92,7 @@ export const Header: React.FC<Props> = () => {
   }, [isOpen, close]);
 
   return (
-    <Container ref={headerRef} className={isOpen ? 'is-open' : undefined}>
+    <Container ref={headerRef}>
       <div className="inner-container">
         <Link to="/" className="brand" aria-label="Camp Carmel home" onClick={closeIfCurrentPage('/')}>
           <HeaderLogo aria-hidden="true" focusable="false" />
@@ -103,18 +107,10 @@ export const Header: React.FC<Props> = () => {
                 </Link>
               </li>
             ))}
-            <li className="cta">
-              <Link to="/registration" activeClassName="active">
-                Register
-              </Link>
-            </li>
           </ul>
         </nav>
 
         <div className="mobile-actions">
-          <Link to="/registration" className="mobile-cta" onClick={closeIfCurrentPage('/registration')}>
-            Register
-          </Link>
           <button
             ref={toggleRef}
             type="button"
@@ -144,10 +140,6 @@ export const Header: React.FC<Props> = () => {
         </nav>
 
         <div className="mobile-menu__footer">
-          <Link to="/registration" className="mobile-menu__register" onClick={closeIfCurrentPage('/registration')}>
-            Register for summer 2026
-          </Link>
-
           <p className="mobile-menu__help">Questions? We're glad to help.</p>
           <ul className="mobile-menu__contact">
             <li>
@@ -235,21 +227,9 @@ const Container = styled.header`
         text-decoration-thickness: 2px;
       }
     }
-
-    .cta a {
-      margin-left: 8px;
-      padding: 9px 20px;
-      background-color: var(--color-accent);
-      color: var(--color-blank);
-      text-decoration: none;
-
-      &:hover {
-        background-color: var(--color-accent-dark);
-      }
-    }
   }
 
-  // Mobile actions (Register + menu button)
+  // Mobile menu button
 
   .mobile-actions {
     display: none;
@@ -258,20 +238,6 @@ const Container = styled.header`
     padding-right: 8px;
   }
 
-  .mobile-cta {
-    padding: 10px 16px;
-    border-radius: 6px;
-    background-color: var(--color-accent);
-    color: var(--color-blank);
-    font-weight: 700;
-    font-size: 15px;
-    line-height: 1;
-    text-decoration: none;
-
-    &:hover {
-      background-color: var(--color-accent-dark);
-    }
-  }
 
   .nav-toggle {
     display: flex;
@@ -290,10 +256,6 @@ const Container = styled.header`
 
     .mobile-actions {
       display: flex;
-    }
-
-    &.is-open .mobile-cta {
-      visibility: hidden; // the menu has its own, larger Register button
     }
   }
 `;
@@ -376,25 +338,9 @@ const MobileMenu = styled.div`
     padding-top: 32px;
   }
 
-  .mobile-menu__register {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 52px;
-    border-radius: 8px;
-    background-color: var(--color-accent);
-    color: var(--color-blank);
-    font-size: 17px;
-    font-weight: 700;
-    text-decoration: none;
-
-    &:hover {
-      background-color: var(--color-accent-dark);
-    }
-  }
 
   .mobile-menu__help {
-    margin: 24px 0 4px;
+    margin: 0 0 4px;
     font-size: 15px;
     font-weight: 700;
     color: var(--color-text-medium);
