@@ -35,9 +35,10 @@ export const Footer: React.FC = () => {
           </div>
           <div className="footer__section">
             <StaticImage
-              src="../images/CCCA-logo-3.jpg"
-              alt="Christian Camp and Conference Association (CCCA)"
-              height={120}
+              src="../images/ccca-logo.png"
+              alt="Member of the Christian Camp and Conference Association (CCCA)"
+              height={64}
+              placeholder="none"
               quality={80}
               loading="eager"
             />
