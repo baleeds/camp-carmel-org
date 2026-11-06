@@ -30,6 +30,10 @@ const Container = styled.div`
   width: 100%;
   background-size: cover;
 
+  :focus-visible {
+    outline-color: #f3d9b8;
+  }
+
   // Spotlights on the dark band drop their card, so their copy needs to be light.
   // '&&' doubles the class so this always beats ImageSpotlight's own heading color.
   && .image-spotlight__content {

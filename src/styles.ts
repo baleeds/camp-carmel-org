@@ -114,6 +114,12 @@ export const GlobalStyles = createGlobalStyle`
     text-underline-offset: 3px;
   }
 
+  // Keyboard focus ring (mouse clicks don't trigger :focus-visible)
+  :focus-visible {
+    outline: 3px solid var(--color-accent);
+    outline-offset: 2px;
+  }
+
   .eyebrow {
     font-family: var(--font-stack);
     font-size: 14px;

@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image';
 import styled from 'styled-components';
 
@@ -70,6 +70,10 @@ const Container = styled.section`
     max-width: 760px;
     margin: 0 0 32px;
     font-size: clamp(36px, 3.4vw + 20px, 64px);
+  }
+
+  :focus-visible {
+    outline-color: #f3d9b8;
   }
 
   .hero__actions {
