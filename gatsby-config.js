@@ -56,10 +56,10 @@ module.exports = {
         name: `camp-carmel`,
         short_name: `camp-carmel`,
         start_url: `/`,
-        background_color: `#FFFFFF`,
+        background_color: `#FAF6EE`,
         // This will impact how browsers show your PWA/website
         // https://css-tricks.com/meta-theme-color-and-trickery/
-        theme_color: `#0B4B5E`,
+        theme_color: `#FAF6EE`,
         display: `minimal-ui`,
         icon: `src/assets/camp-carmel-icon.png`, // This path is relative to the root of the site.
       },
