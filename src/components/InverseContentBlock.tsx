@@ -31,7 +31,8 @@ const Container = styled.div`
   background-size: cover;
 
   // Spotlights on the dark band drop their card, so their copy needs to be light.
-  .image-spotlight__content {
+  // '&&' doubles the class so this always beats ImageSpotlight's own heading color.
+  && .image-spotlight__content {
     h2,
     h3,
     p,
@@ -49,7 +50,7 @@ const Container = styled.div`
     }
   }
 
-  .image-spotlight__action a {
+  && .image-spotlight__action a {
     color: #f3d9b8;
 
     &:hover {

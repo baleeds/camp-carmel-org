@@ -1,4 +1,4 @@
-﻿import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
   :root {
@@ -24,7 +24,7 @@ export const GlobalStyles = createGlobalStyle`
     --color-border-light: #E8E1D3;
 
     --color-background-light: #F1EADC;
-    --color-background-medium: #d6e3e7;
+    --color-background-medium: #EBDDC3;
     --color-background-blank: var(--color-cream);
     --color-background-none: transparent;
 

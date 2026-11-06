@@ -1,4 +1,4 @@
-﻿import React, { FormEvent, useRef, useState } from 'react';
+import React, { FormEvent, useRef, useState } from 'react';
 import styled from 'styled-components';
 import { HeartArrow } from 'react-bootstrap-icons';
 
@@ -147,7 +147,7 @@ const Container = styled.form`
   button {
     display: inline-flex;
     height: 48px;
-    background-color: var(--color-secondary);
+    background-color: var(--color-accent);
     border-radius: 8px;
     align-items: center;
     padding: 0 24px;
@@ -157,7 +157,7 @@ const Container = styled.form`
     font-family: var(--font-stack);
 
     &:hover:not([disabled]) {
-      background-color: var(--color-secondary-light);
+      background-color: var(--color-accent-dark);
     }
 
     &[disabled] {

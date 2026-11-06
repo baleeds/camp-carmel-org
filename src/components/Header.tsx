@@ -86,8 +86,7 @@ const Container = styled.header`
   left: 0;
   right: 0;
   height: 64px;
-  background-color: rgb(250 246 238 / 94%);
-  backdrop-filter: saturate(140%) blur(8px);
+  background-color: var(--color-cream);
   display: flex;
   justify-content: center;
   z-index: 9999;
