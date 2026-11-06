@@ -48,6 +48,14 @@ export const Header: React.FC<Props> = () => {
     if (returnFocus) toggleRef.current?.focus();
   }, []);
 
+  // Leave the menu open while Gatsby loads the next page; each page renders its own Header,
+  // so the menu is gone as soon as the new page appears. Only a tap on the current page
+  // (where nothing navigates) needs to close it by hand.
+  const closeIfCurrentPage = (to: string) => () => {
+    const normalize = (path: string) => path.replace(/\/+$/, '') || '/';
+    if (normalize(window.location.pathname) === normalize(to)) close();
+  };
+
   // While the menu is open: lock page scroll, make everything outside the header inert
   // (so Tab and screen readers stay inside the menu), and close on Escape or on resize to desktop.
   useEffect(() => {
@@ -82,7 +90,7 @@ export const Header: React.FC<Props> = () => {
   return (
     <Container ref={headerRef} className={isOpen ? 'is-open' : undefined}>
       <div className="inner-container">
-        <Link to="/" className="brand" aria-label="Camp Carmel home" onClick={() => close()}>
+        <Link to="/" className="brand" aria-label="Camp Carmel home" onClick={closeIfCurrentPage('/')}>
           <HeaderLogo aria-hidden="true" focusable="false" />
         </Link>
 
@@ -104,7 +112,7 @@ export const Header: React.FC<Props> = () => {
         </nav>
 
         <div className="mobile-actions">
-          <Link to="/registration" className="mobile-cta" onClick={() => close()}>
+          <Link to="/registration" className="mobile-cta" onClick={closeIfCurrentPage('/registration')}>
             Register
           </Link>
           <button
@@ -126,7 +134,7 @@ export const Header: React.FC<Props> = () => {
           <ul className="mobile-menu__links">
             {navbarItems.map((item) => (
               <li key={item.to}>
-                <Link to={item.to} activeClassName="active" partiallyActive onClick={() => close()}>
+                <Link to={item.to} activeClassName="active" partiallyActive onClick={closeIfCurrentPage(item.to)}>
                   <span>{item.displayName}</span>
                   <ChevronRight size={18} aria-hidden="true" />
                 </Link>
@@ -136,7 +144,7 @@ export const Header: React.FC<Props> = () => {
         </nav>
 
         <div className="mobile-menu__footer">
-          <Link to="/registration" className="mobile-menu__register" onClick={() => close()}>
+          <Link to="/registration" className="mobile-menu__register" onClick={closeIfCurrentPage('/registration')}>
             Register for summer 2026
           </Link>
 
