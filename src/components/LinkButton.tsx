@@ -1,4 +1,4 @@
-﻿import * as React from 'react';
+import * as React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 import { Icon } from 'react-bootstrap-icons';
@@ -6,7 +6,7 @@ import { Icon } from 'react-bootstrap-icons';
 interface Props {
   to: string;
   text: string;
-  style?: 'none' | 'ghost' | 'inverse' | 'outline' | 'inverseOutline';
+  style?: 'none' | 'ghost' | 'primary' | 'inverse' | 'outline' | 'inverseOutline';
   size?: 'default' | 'large';
   RightIcon?: Icon;
   LeftIcon?: Icon;
@@ -70,10 +70,22 @@ const LinkButtonGhost = styled(LinkButtonNone)`
   align-items: center;
   justify-content: center;
   padding: 12px 20px;
-  border-radius: 4px;
+  border-radius: 6px;
+  transition: background-color 150ms ease, color 150ms ease, border-color 150ms ease;
 
   &:hover {
     color: var(--color-primary);
+  }
+`;
+
+const LinkButtonPrimary = styled(LinkButtonGhost)`
+  background-color: var(--color-accent);
+  color: var(--color-blank);
+  border: 1.5px solid transparent;
+
+  &:hover {
+    background-color: var(--color-accent-dark);
+    color: var(--color-blank);
   }
 `;
 
@@ -107,6 +119,7 @@ const LinkButtonInverse = styled(LinkButtonGhost)`
 const buttonMap = {
   none: LinkButtonNone,
   ghost: LinkButtonGhost,
+  primary: LinkButtonPrimary,
   outline: LinkButtonOutline,
   inverse: LinkButtonInverse,
   inverseOutline: LinkButtonInverseOutline,

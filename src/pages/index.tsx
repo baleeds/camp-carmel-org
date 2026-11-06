@@ -29,12 +29,13 @@ const IndexPage = () => {
   return (
     <Layout>
       <Hero
-        title="Camp Carmel is an overnight summer camp tucked away in Western North Carolina that has been offering Christ-centered camps since 1952."
-        subTitle="Welcome to Camp Carmel"
+        title="A Christ-centered summer camp in the Blue Ridge Mountains."
+        subTitle="Since 1952 · Linville, North Carolina"
         image={heroImage}
       >
         {/*<LinkButton to="winter" text="Explore Winter Camp" style="inverse" RightIcon={ArrowRight} />*/}
-        <LinkButton to="dates" text="View our 2026 dates and rates" style="inverse" RightIcon={ArrowRight} />
+        <LinkButton to="dates" text="View 2026 dates & rates" style="primary" RightIcon={ArrowRight} />
+        <LinkButton to="camp" text="Life at camp" style="inverseOutline" />
       </Hero>
 
       <ContentBlock>

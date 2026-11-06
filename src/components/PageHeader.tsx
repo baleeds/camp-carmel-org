@@ -1,7 +1,5 @@
 ﻿import React from 'react';
-import { IGatsbyImageData } from 'gatsby-plugin-image';
-import BackgroundImg from 'gatsby-background-image';
-import { convertToBgImage } from 'gbimage-bridge';
+import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image';
 import styled from 'styled-components';
 
 interface Props {
@@ -10,51 +8,52 @@ interface Props {
 }
 
 export const PageHeader: React.FC<Props> = ({ image, title }) => {
-  const bgImage = convertToBgImage(image);
-
   if (!image) return null;
 
   return (
-    <div>
-      <Background {...bgImage}>
-        <Shadow />
-        <Container>{title && <h1>{title}</h1>}</Container>
-      </Background>
-    </div>
+    <Container>
+      <GatsbyImage image={image} alt="" className="page-header__image" loading="eager" />
+      <div className="page-header__scrim" />
+      <div className="page-header__content">{title && <h1>{title}</h1>}</div>
+    </Container>
   );
 };
 
-const Background: any = styled(BackgroundImg)`
-  width: 100%;
-  height: 350px;
+const Container = styled.section`
+  position: relative;
   display: flex;
   align-items: flex-end;
   justify-content: center;
+  height: 350px;
+  overflow: hidden;
+  background-color: var(--color-primary-dark);
 
   @media screen and (min-width: 700px) {
     height: 500px;
   }
-`;
 
-const Shadow = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(360deg, rgb(2 0 36 / 53%) 0%, rgba(0, 0, 0, 0) 36%);
-`;
+  .page-header__image {
+    position: absolute !important;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
 
-const Container = styled.div`
-  max-width: var(--site-width);
-  width: 100%;
-  padding: 0 20px;
-  position: absolute;
+  .page-header__scrim {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgb(8 30 38 / 70%) 0%, rgb(8 30 38 / 0%) 45%);
+  }
 
-  h1,
-  h2 {
-    color: var(--color-blank);
-    text-shadow: 0px 4px 3px #00000080;
-    max-width: 800px;
+  .page-header__content {
+    position: relative;
+    max-width: var(--site-width);
+    width: 100%;
+    padding: 0 20px;
+
+    h1 {
+      color: var(--color-blank);
+      max-width: 800px;
+    }
   }
 `;

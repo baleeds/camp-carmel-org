@@ -156,7 +156,7 @@ const IndexPage: React.FC = () => {
           <StaticImage
             src="../../images/camp-carmel-2019-20.jpg"
             alt="Camp is for everyone"
-            imgStyle={{ borderRadius: 8 }}
+            imgStyle={{ borderRadius: 12 }}
           />
 
           <h2>Camp is For Everyone</h2>

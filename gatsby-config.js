@@ -30,12 +30,12 @@ module.exports = {
         preconnect: [`https://fonts.googleapis.com`, `https://fonts.gstatic.com`],
         web: [
           {
-            name: `Open Sans`,
-            file: `https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap`,
+            name: `Fraunces`,
+            file: `https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&display=swap`,
           },
           {
-            name: `Patua One`,
-            file: `https://fonts.googleapis.com/css2?family=Patua+One&display=swap`,
+            name: `Source Sans 3`,
+            file: `https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap`,
           },
         ],
       },
@@ -56,10 +56,10 @@ module.exports = {
         name: `camp-carmel`,
         short_name: `camp-carmel`,
         start_url: `/`,
-        background_color: `#FFFFFF`,
+        background_color: `#FAF6EE`,
         // This will impact how browsers show your PWA/website
         // https://css-tricks.com/meta-theme-color-and-trickery/
-        theme_color: `#0B4B5E`,
+        theme_color: `#FAF6EE`,
         display: `minimal-ui`,
         icon: `src/assets/camp-carmel-icon.png`, // This path is relative to the root of the site.
       },
