@@ -140,7 +140,7 @@ export const Header: React.FC<Props> = () => {
         </nav>
 
         <div className="mobile-menu__footer">
-          <p className="mobile-menu__help">Questions? We're glad to help.</p>
+          <p className="mobile-menu__help">Have a question? Reach out to Erica.</p>
           <ul className="mobile-menu__contact">
             <li>
               <a href="tel:8287332480">
