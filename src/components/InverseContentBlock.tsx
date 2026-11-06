@@ -1,4 +1,4 @@
-﻿import styled from 'styled-components';
+import styled from 'styled-components';
 import { ContentBlock } from './ContentBlock';
 import React from 'react';
 
@@ -29,4 +29,31 @@ const Container = styled.div`
   padding: 64px 0;
   width: 100%;
   background-size: cover;
+
+  // Spotlights on the dark band drop their card, so their copy needs to be light.
+  .image-spotlight__content {
+    h2,
+    h3,
+    p,
+    li {
+      color: var(--color-blank);
+    }
+
+    p,
+    li {
+      color: rgb(255 255 255 / 85%);
+    }
+
+    a {
+      color: #f3d9b8;
+    }
+  }
+
+  .image-spotlight__action a {
+    color: #f3d9b8;
+
+    &:hover {
+      color: var(--color-blank);
+    }
+  }
 `;

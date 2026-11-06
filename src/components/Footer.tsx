@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import Logo from '../assets/camp-carmel-logo.svg';
 import { StaticImage } from 'gatsby-plugin-image';
@@ -46,7 +46,9 @@ export const Footer: React.FC = () => {
 
         <div className="footer__bottom">
           <FooterLogo />
-          <div className="footer__copyright">© {new Date().getFullYear()} Camp Carmel, Inc.</div>
+          <div className="footer__copyright">
+            Christ-centered camping since 1952 · © {new Date().getFullYear()} Camp Carmel, Inc.
+          </div>
         </div>
       </Container>
     </ContentBlock>
@@ -54,6 +56,16 @@ export const Footer: React.FC = () => {
 };
 
 const Container = styled.footer`
+  border-top: 1px solid var(--color-border-light);
+  padding-top: 40px;
+
+  h4 {
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-text-medium);
+  }
+
   .footer__content {
     display: flex;
     flex-direction: column;

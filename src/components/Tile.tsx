@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image';
 import styled from 'styled-components';
 
@@ -18,7 +18,6 @@ export const Tile: React.FC<Props> = ({ image, title, description, action }) => 
         alt={title}
         image={image}
         className="tile__image"
-        imgStyle={{ borderTopRightRadius: 8, borderTopLeftRadius: 8 }}
       />
 
       <div className="tile__body">
@@ -32,20 +31,18 @@ export const Tile: React.FC<Props> = ({ image, title, description, action }) => 
   );
 };
 
+// Tiles sit on the dark teal band, so the copy is light and there is no card behind it.
 const Container = styled.div`
-  border-radius: 8px;
   display: flex;
   min-height: 0;
   flex-direction: column;
-  box-shadow: 0 4px 20px 0 #00000014;
-  overflow: hidden;
 
   .tile__image {
-    flex-basis: 250px;
+    flex-basis: 260px;
     flex-shrink: 0;
     flex-grow: 0;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+    border-radius: var(--radius);
+    isolation: isolate;
   }
 
   .tile__body {
@@ -53,17 +50,35 @@ const Container = styled.div`
     min-height: 0;
     display: flex;
     flex-direction: column;
-    padding: 8px 0;
-    background-color: white;
+    padding-top: 8px;
   }
 
   .tile__content {
     flex: 1;
     min-height: 0;
-    padding: 0 20px;
+
+    h2 {
+      color: var(--color-blank);
+      font-size: clamp(24px, 1vw + 18px, 30px);
+      margin-bottom: 12px;
+    }
+
+    p {
+      color: rgb(255 255 255 / 85%);
+      margin-top: 0;
+    }
   }
 
   .tile__action {
     flex-shrink: 0;
+    margin-left: -20px;
+
+    a {
+      color: #f3d9b8;
+
+      &:hover {
+        color: var(--color-blank);
+      }
+    }
   }
 `;

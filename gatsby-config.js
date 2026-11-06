@@ -30,12 +30,12 @@ module.exports = {
         preconnect: [`https://fonts.googleapis.com`, `https://fonts.gstatic.com`],
         web: [
           {
-            name: `Open Sans`,
-            file: `https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap`,
+            name: `Fraunces`,
+            file: `https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&display=swap`,
           },
           {
-            name: `Patua One`,
-            file: `https://fonts.googleapis.com/css2?family=Patua+One&display=swap`,
+            name: `Source Sans 3`,
+            file: `https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap`,
           },
         ],
       },

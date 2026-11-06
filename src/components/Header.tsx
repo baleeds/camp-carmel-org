@@ -10,6 +10,7 @@ interface Props {}
 interface NavbarItem {
   displayName: string;
   to: string;
+  isCta?: boolean;
 }
 
 const navbarItems: NavbarItem[] = [
@@ -22,10 +23,6 @@ const navbarItems: NavbarItem[] = [
     to: '/dates',
   },
   {
-    displayName: 'Registration',
-    to: '/registration',
-  },
-  {
     displayName: 'Parent Info',
     to: '/parent-info',
   },
@@ -36,6 +33,11 @@ const navbarItems: NavbarItem[] = [
   {
     displayName: 'History & Beliefs',
     to: '/history',
+  },
+  {
+    displayName: 'Register',
+    to: '/registration',
+    isCta: true,
   },
 ];
 
@@ -54,14 +56,17 @@ export const Header: React.FC<Props> = () => {
         </Link>
 
         <div className="right">
-          <button className="nav-toggle" onClick={toggleMobileNav}>
+          <Link to="/registration" className="mobile-cta">
+            Register
+          </Link>
+          <button className="nav-toggle" onClick={toggleMobileNav} aria-label={isOpen ? 'Close menu' : 'Open menu'}>
             {isOpen ? <X size={36} /> : <List size={36} />}
           </button>
 
           <nav className={isOpen ? 'is-open' : ''}>
             <ul>
               {navbarItems.map((item) => (
-                <li key={item.to}>
+                <li key={item.to} className={item.isCta ? 'cta' : undefined}>
                   <Link to={item.to} activeClassName="active">
                     {item.displayName}
                   </Link>
@@ -80,13 +85,30 @@ const Container = styled.header`
   top: 0;
   left: 0;
   right: 0;
-  height: 60px;
-  background-color: var(--color-blank);
+  height: 64px;
+  background-color: rgb(250 246 238 / 94%);
+  backdrop-filter: saturate(140%) blur(8px);
   display: flex;
   justify-content: center;
   z-index: 9999;
   border-bottom: 1px solid var(--color-border-light);
-  box-shadow: rgb(0 0 0 / 6%) 0 1px 6px 0;
+
+  .right {
+    display: flex;
+    align-items: center;
+  }
+
+  .mobile-cta {
+    display: none;
+    padding: 8px 16px;
+    margin-right: 8px;
+    border-radius: 6px;
+    background-color: var(--color-accent);
+    color: var(--color-blank);
+    font-weight: 700;
+    font-size: 15px;
+    text-decoration: none;
+  }
 
   .inner-container {
     display: flex;
@@ -138,8 +160,29 @@ const Container = styled.header`
             color: var(--color-primary);
           }
 
+          &:hover {
+            text-decoration: underline;
+            text-decoration-thickness: 2px;
+          }
+
           &.active {
-            color: var(--color-text-primary);
+            color: var(--color-primary);
+            text-decoration: underline;
+            text-decoration-color: var(--color-accent);
+            text-decoration-thickness: 2px;
+          }
+        }
+
+        &.cta a {
+          margin-left: 8px;
+          padding: 9px 20px;
+          border-radius: 6px;
+          background-color: var(--color-accent);
+          color: var(--color-blank);
+          text-decoration: none;
+
+          &:hover {
+            background-color: var(--color-accent-dark);
           }
         }
       }
@@ -154,26 +197,35 @@ const Container = styled.header`
     nav.is-open {
       display: block;
       position: fixed;
-      top: 60px;
+      top: 64px;
       left: 0;
       right: 0;
       bottom: 0;
       padding-top: 16px;
-      background: white;
+      background: var(--color-cream);
       z-index: 9998;
 
       ul {
         display: block;
 
         li a {
-          font-size: 18px;
+          font-size: 20px;
           margin: 4px 0;
+          padding: 12px 20px;
+        }
+
+        li.cta {
+          display: none;
         }
       }
     }
 
     .nav-toggle {
       display: flex;
+    }
+
+    .mobile-cta {
+      display: inline-block;
     }
   }
 `;

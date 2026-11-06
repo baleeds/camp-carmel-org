@@ -1,4 +1,4 @@
-﻿import React, { CSSProperties, ReactNode } from 'react';
+import React, { CSSProperties, ReactNode } from 'react';
 import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image';
 import styled from 'styled-components';
 
@@ -53,86 +53,73 @@ export const ImageSpotlight: React.FC<Props> = ({
 };
 
 const Container = styled.div`
-  margin: 0 auto 128px;
+  margin: 0 auto 120px;
   display: flex;
   align-items: center;
+  gap: 64px;
 
   &.image-spotlight--left {
     flex-direction: row-reverse;
-
-    .image-spotlight__image {
-      margin-left: -70px;
-      margin-right: 0;
-    }
-
-    .image-spotlight__body {
-      margin-right: -70px;
-      margin-left: 0;
-    }
   }
 
   .image-spotlight__image {
-    flex: 3;
-    margin-right: -70px;
+    flex: 7;
     height: 480px;
-    border-radius: 8px;
-    box-shadow: 0 2px 12px 0 #00000014;
+    border-radius: var(--radius);
+    isolation: isolate; // keeps rounded corners on the image in Safari
   }
 
   .image-spotlight__body {
-    flex: 2;
-    margin-left: -70px;
-    z-index: 1;
-    background-color: var(--color-blank);
-    box-shadow: 0 4px 20px 0 #00000014;
-    padding: 8px 0;
+    flex: 5;
     min-height: 0;
     display: flex;
     flex-direction: column;
-    border-radius: 8px;
   }
 
   &.image-spotlight--large {
+    .image-spotlight__image {
+      flex: 6;
+    }
+
     .image-spotlight__body {
-      flex: 3;
+      flex: 6;
     }
   }
 
   .image-spotlight__content {
     flex: 1;
     min-height: 0;
-    padding: 0 48px;
+
+    h2 {
+      margin-top: 0;
+      color: var(--color-primary);
+    }
   }
 
   .image-spotlight__action {
     flex-shrink: 0;
-    padding: 12px 28px;
+    margin-left: -20px; // align ghost button text with the copy above
+  }
+
+  // Tablet
+  @media screen and (max-width: 950px) {
+    gap: 40px;
+
+    .image-spotlight__image {
+      height: 380px;
+    }
   }
 
   // Mobile
   @media screen and (max-width: 700px) {
     flex-direction: column !important;
-    margin-bottom: 92px;
+    align-items: stretch;
+    gap: 24px;
+    margin-bottom: 80px;
 
     .image-spotlight__image {
-      margin-left: -20px !important;
-      margin-right: -20px !important;
-      margin-bottom: -70px;
-      border-radius: 0 !important;
-      box-shadow: none !important;
-    }
-
-    .image-spotlight__body {
-      margin-left: 0 !important;
-      margin-right: 0 !important;
-    }
-
-    .image-spotlight__content {
-      padding: 0 20px !important;
-    }
-
-    .image-spotlight__action {
-      padding: 0 !important;
+      flex: none;
+      height: 280px;
     }
   }
 `;

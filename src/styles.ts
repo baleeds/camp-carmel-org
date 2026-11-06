@@ -4,42 +4,51 @@ export const GlobalStyles = createGlobalStyle`
   :root {
     // Global dimensions
     --site-width: 1200px;
+    --radius: 12px;
 
     // Color palette
+    // Deep river teal stays the anchor color; warm cream and a rust accent bring in the mountains.
     --color-primary: #0B4B5E;
-    --color-primary-light: #316d7e;
+    --color-primary-light: #2E6B7C;
+    --color-primary-dark: #08394A;
     --color-secondary: #0b71c3;
     --color-secondary-light: #2989d7;
+    --color-accent: #A44A22;
+    --color-accent-dark: #8A3C19;
     --color-blank: white;
-    
-    --color-text-default: #2B2B2B;
-    --color-text-medium: #494949;
-    
-    --color-border-light: #EEEEEE;
-    
-    --color-background-light: #0b4b5e17;
+    --color-cream: #FAF6EE;
+
+    --color-text-default: #2A2622;
+    --color-text-medium: #5A534B;
+
+    --color-border-light: #E8E1D3;
+
+    --color-background-light: #F1EADC;
     --color-background-medium: #d6e3e7;
-    --color-background-blank: white;
+    --color-background-blank: var(--color-cream);
     --color-background-none: transparent;
-    
-    --font-stack: 'Open Sans', 'Segoe UI', Tahoma, sans-serif;
-    --font-stack-secondary: 'Patua One', 'Arial Black', serif;
+
+    --font-stack: 'Source Sans 3', 'Segoe UI', Tahoma, sans-serif;
+    --font-stack-secondary: 'Fraunces', Georgia, serif;
   }
 
   * {
     box-sizing: border-box;
-    
-    scroll-margin-top: 72px;
-    scroll-snap-margin-top: 72px; /* iOS 11 and older */
+
+    scroll-margin-top: 80px;
+    scroll-snap-margin-top: 80px; /* iOS 11 and older */
   }
 
   html, body {
     font-family: var(--font-stack);
     color: var(--color-text-default);
+    background-color: var(--color-cream);
     margin: 0;
     padding: 0;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
   }
-  
+
   input, textarea, button {
     font-family: var(--font-stack);
     color: var(--color-text-default);
@@ -47,75 +56,72 @@ export const GlobalStyles = createGlobalStyle`
 
   h1, h2, h3, h4 {
     font-family: var(--font-stack-secondary);
-    
+    font-weight: 600;
+    letter-spacing: -0.01em;
+
     em {
-      opacity: 0.6;
+      font-weight: 400;
+      opacity: 0.75;
     }
-    
+
     &.subtext {
-      margin-top: -18px;
+      margin-top: -12px;
     }
   }
 
   h1 {
-    font-size: 32px;
-    line-height: 1em;
-    font-weight: normal;
+    font-size: clamp(34px, 2.6vw + 20px, 52px);
+    line-height: 1.08;
     color: var(--color-primary);
   }
 
   h2 {
-    font-size: 24px;
-    line-height: 1.1em;
-    font-weight: normal;
+    font-size: clamp(27px, 1.6vw + 18px, 38px);
+    line-height: 1.15;
   }
 
   h3 {
-    font-size: 18px;
-    line-height: 1.2em;
-    font-weight: normal;
+    font-size: clamp(20px, 0.8vw + 16px, 26px);
+    line-height: 1.25;
   }
-  
+
   h4 {
-    font-size: 15px;
-    line-height: 1.2em;
+    font-family: var(--font-stack);
+    font-size: 18px;
+    line-height: 1.3;
     font-weight: 700;
+    letter-spacing: 0;
     margin-bottom: .2em;
   }
 
   li, p, label, input, textarea {
-    font-size: 15px;
-    line-height: 1.6em;
+    font-size: 17px;
+    line-height: 1.65;
   }
-  
+
   li {
     margin-bottom: 8px;
   }
 
   @media screen and (min-width: 550px) {
-    h1 {
-      font-size: 40px;
-    }
-
-    h2 {
-      font-size: 32px;
-    }
-
-    h3 {
-      font-size: 24px;
-    }
-    
-    h4 {
-      font-size: 18px;
-    }
-
     p, li, label, input, textarea {
-      font-size: 18px;
+      font-size: 19px;
     }
   }
 
   a {
     color: var(--color-primary);
+    text-underline-offset: 3px;
+  }
+
+  .eyebrow {
+    font-family: var(--font-stack);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin: 0 0 12px;
   }
 
   button {

@@ -35,6 +35,15 @@ const Details = styled.details`
     cursor: pointer;
     list-style: none;
 
+    h2 {
+      font-size: clamp(21px, 0.8vw + 17px, 27px);
+      margin: 24px 0;
+    }
+
+    &:hover h2 {
+      color: var(--color-primary);
+    }
+
     // Hide the default indicator
     &::-webkit-details-marker {
       display: none;
