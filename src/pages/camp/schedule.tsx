@@ -21,7 +21,7 @@ const IndexPage: React.FC = () => {
     <Layout>
       <PageHeader title="A Typical Schedule" image={headerImage} />
 
-      <ContentBlock background={'light'} style={{ paddingBottom: 24, marginBottom: 64 }}>
+      <ContentBlock background={'light'} style={{ paddingBottom: 24, marginBottom: 16 }}>
         <TextBlock>
           <h1>Always Fresh</h1>
           <p>
@@ -38,7 +38,7 @@ const IndexPage: React.FC = () => {
             id="nutrition"
             src="../../images/camp-carmel-2019-21.jpg"
             alt="Directors & Counselors"
-            imgStyle={{ borderRadius: 8 }}
+            imgStyle={{ borderRadius: 12 }}
           />
           <h2>Every Day is Different</h2>
           <p>

@@ -1,4 +1,4 @@
-﻿import * as React from 'react';
+import * as React from 'react';
 import styled from 'styled-components';
 
 interface Props {
@@ -18,12 +18,13 @@ export const TextSpotlight: React.FC<Props> = ({ title, children }) => (
 );
 
 const Container = styled.div`
-  padding: 124px 0;
+  padding: 96px 0;
   display: flex;
   justify-content: center;
 
   @media screen and (max-width: 550px) {
     flex-direction: column;
+    padding: 64px 0;
   }
 
   .text-spotlight--title {

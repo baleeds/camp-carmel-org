@@ -30,7 +30,7 @@ export const ImageSpotlight: React.FC<Props> = ({
   return (
     <Container
       id={id}
-      className={`image-spotlight--${orientation} image-spotlight--${children ? 'large' : 'small'}`}
+      className={`image-spotlight image-spotlight--${orientation} image-spotlight--${children ? 'large' : 'small'}`}
       style={style}
     >
       <GatsbyImage alt={title} image={image} className="image-spotlight__image" />
@@ -53,7 +53,7 @@ export const ImageSpotlight: React.FC<Props> = ({
 };
 
 const Container = styled.div`
-  margin: 0 auto 120px;
+  margin: 0 auto 96px;
   display: flex;
   align-items: center;
   gap: 64px;
@@ -115,7 +115,7 @@ const Container = styled.div`
     flex-direction: column !important;
     align-items: stretch;
     gap: 24px;
-    margin-bottom: 80px;
+    margin-bottom: 64px;
 
     .image-spotlight__image {
       flex: none;

@@ -1,4 +1,4 @@
-﻿import styled from 'styled-components';
+import styled from 'styled-components';
 
 export const TextBlock = styled.div`
   margin: 0 auto;
@@ -7,6 +7,16 @@ export const TextBlock = styled.div`
 `;
 
 export const InverseTextBlock = styled(TextBlock)`
+  padding: 8px 0;
+
+  > :first-child {
+    margin-top: 0;
+  }
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+
   h1,
   h2,
   h3,

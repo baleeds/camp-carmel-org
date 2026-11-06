@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { Dash, Plus } from 'react-bootstrap-icons';
 
@@ -35,9 +35,15 @@ const Details = styled.details`
     cursor: pointer;
     list-style: none;
 
+    padding: 18px 0;
+
+    @media screen and (min-width: 550px) {
+      padding: 24px 0;
+    }
+
     h2 {
       font-size: clamp(21px, 0.8vw + 17px, 27px);
-      margin: 24px 0;
+      margin: 0;
     }
 
     &:hover h2 {
@@ -83,10 +89,14 @@ const Details = styled.details`
   }
 
   .collapsible-section__content {
-    padding: 0 0 0 46px;
+    padding: 0 0 12px 46px;
+
+    > :first-child {
+      margin-top: 0;
+    }
 
     @media screen and (min-width: 550px) {
-      padding: 0 0 0 52px;
+      padding: 0 0 12px 52px;
     }
   }
 `;

@@ -112,7 +112,7 @@ const IndexPage: React.FC = () => {
             id="nutrition"
             src="../../images/camp-carmel-2017-699.jpg"
             alt="Directors & Counselors"
-            imgStyle={{ borderRadius: 8 }}
+            imgStyle={{ borderRadius: 12 }}
           />
           <h2>Food & Nutrition</h2>
           <p>
@@ -138,7 +138,7 @@ const IndexPage: React.FC = () => {
             id="counselors"
             src="../../images/junior-camp-630.jpg"
             alt="Directors & Counselors"
-            imgStyle={{ borderRadius: 8 }}
+            imgStyle={{ borderRadius: 12 }}
           />
 
           <h2>Directors & Counselors</h2>

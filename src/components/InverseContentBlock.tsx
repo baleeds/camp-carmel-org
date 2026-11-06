@@ -30,6 +30,10 @@ const Container = styled.div`
   width: 100%;
   background-size: cover;
 
+  && .image-spotlight:last-child {
+    margin-bottom: 0;
+  }
+
   :focus-visible {
     outline-color: #f3d9b8;
   }

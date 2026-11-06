@@ -31,7 +31,7 @@ const IndexPage: React.FC = () => {
           <StaticImage
             src="../../images/junior-camp-carmel-2017-4.jpg"
             alt="Our beliefs are the bedrock of our mission"
-            imgStyle={{ borderRadius: 8 }}
+            imgStyle={{ borderRadius: 12 }}
             style={{ marginBottom: 24 }}
           />
 
@@ -76,7 +76,7 @@ const IndexPage: React.FC = () => {
           <StaticImage
             src="../../images/fall-hike-645.jpg"
             alt="Erica Leeds, Camp Carmel Director"
-            imgStyle={{ borderRadius: 8 }}
+            imgStyle={{ borderRadius: 12 }}
             style={{ marginBottom: 24 }}
           />
 
