@@ -18,7 +18,7 @@ const navbarItems: NavbarItem[] = [
     to: '/winter',
   },
   // {
-  //   displayName: '2026 Dates & Rates',
+  //   displayName: '2027 Dates & Rates',
   //   to: '/dates',
   // },
   // {
