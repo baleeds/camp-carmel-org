@@ -58,6 +58,12 @@ const IndexPage: React.FC = () => {
 
       <ContentBlock background="light">
         <TextBlock style={{ marginBottom: 0, paddingBottom: 72 }}>
+          <StaticImage
+            src="../../images/2023-winter-camp-134.jpg"
+            alt="Two smiling campers sledding down a snowy hill on snow tubes"
+            imgStyle={{ borderRadius: 12 }}
+          />
+
           <h1>Preparing for Winter</h1>
           <p>
             We understand that sending your child to camp can be a big step, and we want to provide you with all the
