@@ -42,6 +42,7 @@ const IndexPage: React.FC = () => {
           orientation="left"
           uncropped
           title="Give Us This Day"
+          subtitle="“I am the bread of life.” – John 6:35"
           action={<LinkButton to="#registration" text="Register for winter camp" RightIcon={ArrowRight} />}
         >
           <p>December 30th, 2026 - January 2nd, 2027</p>
