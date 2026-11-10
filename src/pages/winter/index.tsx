@@ -22,7 +22,8 @@ const IndexPage: React.FC = () => {
 
   return (
     <Layout>
-      <PageHeader image={headerImage} />
+      {/* Image header turned off so the flyer leads the page. To bring it back, uncomment: */}
+      {/*<PageHeader image={headerImage} />*/}
 
       {/*<ContentBlock background="light">*/}
       {/*  <TextBlock>*/}
@@ -34,27 +35,35 @@ const IndexPage: React.FC = () => {
       {/*  </TextBlock>*/}
       {/*</ContentBlock>*/}
 
-      <ContentBlock style={{ marginTop: 64 }}>
+      {/* 64px clears the fixed header; the rest is breathing room above the flyer */}
+      <ContentBlock style={{ marginTop: 64 + 48 }}>
         <ImageSpotlight
           image={winterCampImage}
           orientation="left"
-          title="Yet!"
-          subtitle="Trusting God in the Unknown"
+          uncropped
+          title="Give Us This Day"
+          subtitle="“I am the bread of life.” – John 6:35"
           action={<LinkButton to="#registration" text="Register for winter camp" RightIcon={ArrowRight} />}
         >
-          <p>December 31st - January 3rd, 2026</p>
+          <p>December 30th, 2026 - January 2nd, 2027</p>
           <p>
             Our Winter Camp offers a unique opportunity to enjoy the serene beauty of the season while strengthening
             your relationship with God and forging lasting friendships.
           </p>
           <p>
-            <em>For campers ages 13 to 18. Cost is $100.</em>
+            <em>For campers ages 13 to 18. Registration fee is $100.</em>
           </p>
         </ImageSpotlight>
       </ContentBlock>
 
       <ContentBlock background="light">
         <TextBlock style={{ marginBottom: 0, paddingBottom: 72 }}>
+          <StaticImage
+            src="../../images/2023-winter-camp-134.jpg"
+            alt="Two smiling campers sledding down a snowy hill on snow tubes"
+            imgStyle={{ borderRadius: 12 }}
+          />
+
           <h1>Preparing for Winter</h1>
           <p>
             We understand that sending your child to camp can be a big step, and we want to provide you with all the
@@ -168,7 +177,7 @@ const IndexPage: React.FC = () => {
             <LinkButton
               isAnchor
               blank
-              to="/downloads/Winter Camp Registration Forms 2025-2026.pdf"
+              to="/downloads/Winter Camp Registration Forms 2026-2027.pdf"
               style="inverseOutline"
               text="Winter Registration Packet"
               LeftIcon={Paperclip}
@@ -220,7 +229,7 @@ const query = graphql`
         gatsbyImageData(width: 2000, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
       }
     }
-    winterCamp: file(relativePath: { eq: "2023-winter-camp-128.jpg" }) {
+    winterCamp: file(relativePath: { eq: "2026-winter-camp-flyer.png" }) {
       childImageSharp {
         gatsbyImageData(width: 1000, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
       }

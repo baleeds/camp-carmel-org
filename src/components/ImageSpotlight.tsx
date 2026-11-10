@@ -10,6 +10,8 @@ interface Props {
   description?: string;
   action?: React.ReactNode;
   orientation: 'left' | 'right';
+  /** Show the whole image at its own shape instead of cropping it (for flyers and posters). */
+  uncropped?: boolean;
   style?: CSSProperties;
   children?: ReactNode;
 }
@@ -22,6 +24,7 @@ export const ImageSpotlight: React.FC<Props> = ({
   description,
   action,
   orientation,
+  uncropped,
   style,
   children,
 }) => {
@@ -30,7 +33,9 @@ export const ImageSpotlight: React.FC<Props> = ({
   return (
     <Container
       id={id}
-      className={`image-spotlight image-spotlight--${orientation} image-spotlight--${children ? 'large' : 'small'}`}
+      className={`image-spotlight image-spotlight--${orientation} image-spotlight--${children ? 'large' : 'small'}${
+        uncropped ? ' image-spotlight--uncropped' : ''
+      }`}
       style={style}
     >
       <GatsbyImage alt={title} image={image} className="image-spotlight__image" />
@@ -86,6 +91,12 @@ const Container = styled.div`
     }
   }
 
+  &.image-spotlight--uncropped .image-spotlight__image {
+    flex: 0 0 auto;
+    width: 400px;
+    height: auto;
+  }
+
   .image-spotlight__content {
     flex: 1;
     min-height: 0;
@@ -108,6 +119,11 @@ const Container = styled.div`
     .image-spotlight__image {
       height: 380px;
     }
+
+    &.image-spotlight--uncropped .image-spotlight__image {
+      width: 300px;
+      height: auto;
+    }
   }
 
   // Mobile
@@ -120,6 +136,13 @@ const Container = styled.div`
     .image-spotlight__image {
       flex: none;
       height: 280px;
+    }
+
+    &.image-spotlight--uncropped .image-spotlight__image {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      align-self: center;
     }
   }
 `;

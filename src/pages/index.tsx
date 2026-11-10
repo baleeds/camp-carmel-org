@@ -33,8 +33,8 @@ const IndexPage = () => {
         subTitle="Since 1952 · Linville, North Carolina"
         image={heroImage}
       >
-        {/*<LinkButton to="winter" text="Explore Winter Camp" style="inverse" RightIcon={ArrowRight} />*/}
-        <LinkButton to="dates" text="View 2026 dates & rates" style="primary" RightIcon={ArrowRight} />
+        <LinkButton to="winter" text="Explore Winter Camp" style="primary" RightIcon={ArrowRight} />
+        {/*<LinkButton to="dates" text="View 2027 dates & rates" style="primary" RightIcon={ArrowRight} />*/}
         <LinkButton to="camp" text="Life at camp" style="inverseOutline" />
       </Hero>
 
