@@ -38,6 +38,7 @@ const IndexPage: React.FC = () => {
         <ImageSpotlight
           image={winterCampImage}
           orientation="left"
+          uncropped
           title="Give Us This Day"
           action={<LinkButton to="#registration" text="Register for winter camp" RightIcon={ArrowRight} />}
         >
@@ -219,7 +220,7 @@ const query = graphql`
         gatsbyImageData(width: 2000, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
       }
     }
-    winterCamp: file(relativePath: { eq: "2023-winter-camp-128.jpg" }) {
+    winterCamp: file(relativePath: { eq: "2026-winter-camp-flyer.png" }) {
       childImageSharp {
         gatsbyImageData(width: 1000, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
       }
