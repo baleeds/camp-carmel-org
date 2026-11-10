@@ -22,7 +22,8 @@ const IndexPage: React.FC = () => {
 
   return (
     <Layout>
-      <PageHeader image={headerImage} />
+      {/* Image header turned off so the flyer leads the page. To bring it back, uncomment: */}
+      {/*<PageHeader image={headerImage} />*/}
 
       {/*<ContentBlock background="light">*/}
       {/*  <TextBlock>*/}
@@ -34,7 +35,8 @@ const IndexPage: React.FC = () => {
       {/*  </TextBlock>*/}
       {/*</ContentBlock>*/}
 
-      <ContentBlock style={{ marginTop: 64 }}>
+      {/* 64px clears the fixed header; the rest is breathing room above the flyer */}
+      <ContentBlock style={{ marginTop: 64 + 48 }}>
         <ImageSpotlight
           image={winterCampImage}
           orientation="left"
