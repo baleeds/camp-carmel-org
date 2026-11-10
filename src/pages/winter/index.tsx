@@ -42,7 +42,7 @@ const IndexPage: React.FC = () => {
           subtitle="Trusting God in the Unknown"
           action={<LinkButton to="#registration" text="Register for winter camp" RightIcon={ArrowRight} />}
         >
-          <p>December 31st - January 3rd, 2026</p>
+          <p>December 31st, 2026 - January 3rd, 2027</p>
           <p>
             Our Winter Camp offers a unique opportunity to enjoy the serene beauty of the season while strengthening
             your relationship with God and forging lasting friendships.
