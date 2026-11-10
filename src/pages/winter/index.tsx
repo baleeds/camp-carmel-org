@@ -38,8 +38,7 @@ const IndexPage: React.FC = () => {
         <ImageSpotlight
           image={winterCampImage}
           orientation="left"
-          title="Yet!"
-          subtitle="Trusting God in the Unknown"
+          title="Give Us This Day"
           action={<LinkButton to="#registration" text="Register for winter camp" RightIcon={ArrowRight} />}
         >
           <p>December 30th, 2026 - January 2nd, 2027</p>
@@ -48,7 +47,7 @@ const IndexPage: React.FC = () => {
             your relationship with God and forging lasting friendships.
           </p>
           <p>
-            <em>For campers ages 13 to 18. Cost is $100.</em>
+            <em>For campers ages 13 to 18. Registration fee is $100.</em>
           </p>
         </ImageSpotlight>
       </ContentBlock>
